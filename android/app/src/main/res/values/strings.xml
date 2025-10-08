@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VIDEO IT</string>
+    <string name="default_notification_channel_id">videoit</string>
+    <string name="facebook_app_id">889860029800686</string>
+    <string name="facebook_client_token">1461c6640656dcf7e3444b69f045cd45</string>
+    <style name="incomingCall" parent="Theme.AppCompat.Light.NoActionBar">color
+    <!-- Customize status bar color   -->
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+</resources>

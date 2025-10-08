@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "824749508213",
+    "project_id": "videoit-9c7f0",
+    "storage_bucket": "videoit-9c7f0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824749508213:android:c90e86453d7f51c8fc9a3c",
+        "android_client_info": {
+          "package_name": "com.beit.videoit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824749508213-j24aa31o9ljo2mg02d76ng5gtbdu0rdg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.beit.videoit",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "824749508213-nof2gilrkvjhash76n095hidpn9v295q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.beit.videoit",
+            "certificate_hash": "1b73e0a3aa32154755051ac86d13b2e8312434de"
+          }
+        },
+        {
+          "client_id": "824749508213-d1v72mfjjej728dsosv4ujdo2sk00qrl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu69oavduCWN3WzvQfuLVSETDJTnzLtbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824749508213-d1v72mfjjej728dsosv4ujdo2sk00qrl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
