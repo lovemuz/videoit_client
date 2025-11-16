@@ -56,7 +56,7 @@ const textList = [
   },
   {
     bold: false,
-    text: `These Terms and Conditions set forth the rights and obligations of members regarding the NMOMENT application and website, and aim to stipulate the conditions and procedures for using the service as well as other necessary matters.`,
+    text: `These Terms and Conditions set forth the rights and obligations of members regarding the VIDEOIT application and website, and aim to stipulate the conditions and procedures for using the service as well as other necessary matters.`,
   },
   {
     bold: true,
@@ -88,7 +88,7 @@ The notification in the preceding paragraph will take effect at the earlier of t
   },
   {
     bold: false,
-    text: `Using the service is considered as applying for membership registration by installing the NMOMENT application, accessing the website, executing the application, and creating a profile.
+    text: `Using the service is considered as applying for membership registration by installing the VIDEOIT application, accessing the website, executing the application, and creating a profile.
 A person applying for a membership contract (hereinafter referred to as the "Applicant") is deemed to have accepted the terms of this Agreement at the time of application.
 The Company may accept the application for membership after going through the necessary procedures. However, the Company may refuse to accept the application if it determines that the Applicant is not suitable for membership.
 The membership contract is established at the time the Company accepts the application as mentioned in the preceding paragraph.`,
@@ -370,7 +370,7 @@ Other uses within the scope agreed upon by the member
   },
   {
     bold: false,
-    text: `The court of jurisdiction for any litigation related to these terms and conditions shall be the court that has jurisdiction over the location of NMOMENT.
+    text: `The court of jurisdiction for any litigation related to these terms and conditions shall be the court that has jurisdiction over the location of VIDEOIT.
 `,
   },
   {
@@ -383,7 +383,7 @@ Other uses within the scope agreed upon by the member
   },
   {
     bold: true,
-    text: `NMOMENT's Intellectual Property Rights Policy`,
+    text: `VIDEOIT's Intellectual Property Rights Policy`,
   },
   {
     bold: false,
@@ -416,7 +416,7 @@ k. “Distribution” refers to the act of transferring or lending the original 
   },
   {
     bold: false,
-    text: `NMOMENT respects the intellectual property rights of others and expects users to do the same. NMOMENT's intellectual property rights policy prohibits users from posting, sharing, or transmitting content that infringes on the copyrights, trademarks, or other intellectual property rights of others. Users may utilize works as long as it does not conflict with the ordinary methods of use and does not unfairly harm the legitimate interests of the author.
+    text: `VIDEOIT respects the intellectual property rights of others and expects users to do the same. VIDEOIT's intellectual property rights policy prohibits users from posting, sharing, or transmitting content that infringes on the copyrights, trademarks, or other intellectual property rights of others. Users may utilize works as long as it does not conflict with the ordinary methods of use and does not unfairly harm the legitimate interests of the author.
     `,
   },
   {
@@ -446,7 +446,7 @@ In cases where a work lacks an indication of authorship as described above, the 
   },
   {
     bold: false,
-    text: `NMOMENT does not allow any content that infringes on copyright. Using content owned by others without appropriate permission or a legally valid reason may violate NMOMENT's policies. However, not all uses of copyrighted content without permission constitute copyright infringement. Many countries allow exceptions for the use of works without permission. This includes activities permitted under the fair use doctrine in the United States and the fair dealing provisions in the European Union, as well as corresponding exceptions under local laws in other countries.`,
+    text: `VIDEOIT does not allow any content that infringes on copyright. Using content owned by others without appropriate permission or a legally valid reason may violate VIDEOIT's policies. However, not all uses of copyrighted content without permission constitute copyright infringement. Many countries allow exceptions for the use of works without permission. This includes activities permitted under the fair use doctrine in the United States and the fair dealing provisions in the European Union, as well as corresponding exceptions under local laws in other countries.`,
   },
   {
     bold: true,
@@ -454,7 +454,7 @@ In cases where a work lacks an indication of authorship as described above, the 
   },
   {
     bold: false,
-    text: `User content that infringes on the copyrights of others may be deleted. In cases of multiple copyright violations related to the use of the NMOMENT site or app, the user's account may be temporarily suspended or terminated. NMOMENT reserves the right to prevent users from creating new accounts on its site or app in serious cases of improper account usage.`,
+    text: `User content that infringes on the copyrights of others may be deleted. In cases of multiple copyright violations related to the use of the VIDEOIT site or app, the user's account may be temporarily suspended or terminated. VIDEOIT reserves the right to prevent users from creating new accounts on its site or app in serious cases of improper account usage.`,
   },
   {
     bold: true,
@@ -463,15 +463,15 @@ In cases where a work lacks an indication of authorship as described above, the 
   {
     bold: false,
     text: `
-Copyright holders can contact infringing users directly to resolve complaints more quickly and effectively. Alternatively, they can submit a copyright infringement report to NMOMENT requesting the removal of content suspected of infringement.
+Copyright holders can contact infringing users directly to resolve complaints more quickly and effectively. Alternatively, they can submit a copyright infringement report to VIDEOIT requesting the removal of content suspected of infringement.
 
-All infringement reports must include the necessary information as outlined in the NMOMENT online copyright infringement report form. Failure to provide required information may limit NMOMENT's investigation of the infringement report and may lead to rejection of the report.
+All infringement reports must include the necessary information as outlined in the VIDEOIT online copyright infringement report form. Failure to provide required information may limit VIDEOIT's investigation of the infringement report and may lead to rejection of the report.
 
-NMOMENT may provide the account owner's contact information, including your email address, the name of the copyright owner, and/or details of the complaint to the suspected infringing account owner.
+VIDEOIT may provide the account owner's contact information, including your email address, the name of the copyright owner, and/or details of the complaint to the suspected infringing account owner.
 
 Please note that submitting a report with intentionally misleading or fraudulent information may result in liability for damages under Section 512(f) of the U.S. Digital Millennium Copyright Act (DMCA) or similar laws in other countries.
 
-Upon submitting a report to NMOMENT, the reporting party may be contacted if additional questions arise regarding the report. NMOMENT may not be in a position to adjudicate disputes between third parties, and therefore may not delete reported content or terminate the infringer's account. Alternatively, copyright holders may choose to contact the suspected infringer directly to attempt to resolve the issue.`,
+Upon submitting a report to VIDEOIT, the reporting party may be contacted if additional questions arise regarding the report. VIDEOIT may not be in a position to adjudicate disputes between third parties, and therefore may not delete reported content or terminate the infringer's account. Alternatively, copyright holders may choose to contact the suspected infringer directly to attempt to resolve the issue.`,
   },
   {
     bold: true,
@@ -479,9 +479,9 @@ Upon submitting a report to NMOMENT, the reporting party may be contacted if add
   },
   {
     bold: false,
-    text: `Under Article 17 of the Copyright Directive (EU 2019/790), if you wish to grant NMOMENT the authority to use copyrighted works, please use the specific form provided by NMOMENT for inquiries. After reviewing your request, we will contact you. To prevent music or audiovisual works from being used in the EU, this form must be submitted. For NMOMENT to process these requests, you must provide the necessary information. Once this information is received and the request is verified, NMOMENT will do its best to ensure that your works are not used in the EU NMOMENT.
+    text: `Under Article 17 of the Copyright Directive (EU 2019/790), if you wish to grant VIDEOIT the authority to use copyrighted works, please use the specific form provided by VIDEOIT for inquiries. After reviewing your request, we will contact you. To prevent music or audiovisual works from being used in the EU, this form must be submitted. For VIDEOIT to process these requests, you must provide the necessary information. Once this information is received and the request is verified, VIDEOIT will do its best to ensure that your works are not used in the EU VIDEOIT.
 
-NMOMENT provides a mechanism for resolving copyright infringement disputes to users and rights holders in accordance with legal obligations, but rights holders retain the freedom to assert their rights in court.
+VIDEOIT provides a mechanism for resolving copyright infringement disputes to users and rights holders in accordance with legal obligations, but rights holders retain the freedom to assert their rights in court.
     `,
   },
   {
@@ -494,11 +494,11 @@ If you are a resident outside the European Union:`,
     bold: false,
     text: `When you receive a copyright infringement notice and believe there is an error in the notice or that you have the right to use the content, you can contact the copyright owner directly to request a retraction.
 
-You may also submit a counter-notification through the NMOMENT counter-notification form. All counter-notifications must include the necessary information required in the counter-notification form. If the required information is not provided, NMOMENT's ability to investigate the notice may be limited, and the counter-notification may be denied.
+You may also submit a counter-notification through the VIDEOIT counter-notification form. All counter-notifications must include the necessary information required in the counter-notification form. If the required information is not provided, VIDEOIT's ability to investigate the notice may be limited, and the counter-notification may be denied.
 
-Please be patient as the counter-notification process may take some time. During this period, the copyright claimant may file a lawsuit seeking a court order to temporarily suspend the posting of content under the U.S. Digital Millennium Copyright Act (DMCA) or similar laws in other countries. If necessary and legally permissible, NMOMENT may forward the entire counter-notification, including the contact information you provided, to the original complainant. The complainant may use this information to take legal action against you.
+Please be patient as the counter-notification process may take some time. During this period, the copyright claimant may file a lawsuit seeking a court order to temporarily suspend the posting of content under the U.S. Digital Millennium Copyright Act (DMCA) or similar laws in other countries. If necessary and legally permissible, VIDEOIT may forward the entire counter-notification, including the contact information you provided, to the original complainant. The complainant may use this information to take legal action against you.
 
-If NMOMENT does not receive notice that the complainant is seeking a court order to prevent further infringement of the material, and if the content does not infringe on third-party copyrights, NMOMENT may reinstate or stop the deactivation of access to the removed content. The decision to republish the material is at the sole discretion of NMOMENT.`,
+If VIDEOIT does not receive notice that the complainant is seeking a court order to prevent further infringement of the material, and if the content does not infringe on third-party copyrights, VIDEOIT may reinstate or stop the deactivation of access to the removed content. The decision to republish the material is at the sole discretion of VIDEOIT.`,
   },
   {
     bold: true,
@@ -533,7 +533,7 @@ Under EU law, users may use copyrighted works without the copyright owner's perm
   },
   {
     bold: false,
-    text: `Content that infringes on another person's trademark rights may be removed. If there are multiple violations of trademark rights or other breaches of the terms of service and community guidelines related to the use of the NMOMENT site or app, the account may be temporarily suspended or terminated. We reserve the right to prevent account owners who have used their accounts for inappropriate activities from creating new accounts on the NMOMENT site, app, or any location hosted by NMOMENT.`,
+    text: `Content that infringes on another person's trademark rights may be removed. If there are multiple violations of trademark rights or other breaches of the terms of service and community guidelines related to the use of the VIDEOIT site or app, the account may be temporarily suspended or terminated. We reserve the right to prevent account owners who have used their accounts for inappropriate activities from creating new accounts on the VIDEOIT site, app, or any location hosted by VIDEOIT.`,
   },
   {
     bold: true,
@@ -565,7 +565,7 @@ You may also submit a counter-notification through our counter-notification form
   },
   {
     bold: false,
-    text: `NMOMENT users are responsible for the content they post. If you have questions regarding whether your content or the use of someone else's or a brand's name infringes or violates another's rights, you may consult a lawyer regarding copyright or trademark law. If you are unsure whether the material you wish to report infringes or violates another's rights, it is advisable to seek legal counsel before reporting the content.`,
+    text: `VIDEOIT users are responsible for the content they post. If you have questions regarding whether your content or the use of someone else's or a brand's name infringes or violates another's rights, you may consult a lawyer regarding copyright or trademark law. If you are unsure whether the material you wish to report infringes or violates another's rights, it is advisable to seek legal counsel before reporting the content.`,
   },
   {
     bold: true,
@@ -573,17 +573,17 @@ You may also submit a counter-notification through our counter-notification form
   },
   {
     bold: false,
-    text: `NMOMENT may include means for certain members to share content (“UGC”: User Generated Content) with other members. To the maximum extent permitted by applicable law, NMOMENT automatically holds the rights and licenses to use, reproduce, modify, adapt, publish, translate, reuse, permit, create derivative works, and distribute the UGC generated by members (including but not limited to images, videos, customer service requests, idea submissions, suggestions, and message postings). The rights held by NMOMENT are non-cancelable, non-exclusive rights that are not limited by region and do not require separate fees. Members agree that these rights allow NMOMENT to use the UGC for all purposes, including commercial purposes, without separate compensation to the member. Additionally, members agree to waive any moral rights or similar rights they may have regarding the UGC they create and not to assert such rights.
+    text: `VIDEOIT may include means for certain members to share content (“UGC”: User Generated Content) with other members. To the maximum extent permitted by applicable law, VIDEOIT automatically holds the rights and licenses to use, reproduce, modify, adapt, publish, translate, reuse, permit, create derivative works, and distribute the UGC generated by members (including but not limited to images, videos, customer service requests, idea submissions, suggestions, and message postings). The rights held by VIDEOIT are non-cancelable, non-exclusive rights that are not limited by region and do not require separate fees. Members agree that these rights allow VIDEOIT to use the UGC for all purposes, including commercial purposes, without separate compensation to the member. Additionally, members agree to waive any moral rights or similar rights they may have regarding the UGC they create and not to assert such rights.
 
-NMOMENT may monitor, approve, verify, or pre-block UGC posted by members. NMOMENT reserves the right, at its discretion, to remove, block, edit, move, or deactivate members' UGC. Specifically, if a member posts inappropriate UGC on NMOMENT, NMOMENT may delete the UGC as quickly as possible (within a maximum of 24 hours). Members can also report inappropriate UGC from other members to the NMOMENT monitoring team. If a member's UGC contains links to content outside the website, the member must ensure that the content of the links and the external website are appropriate for the community. This rule applies not only to "embedded links" where videos automatically play upon clicking but also to simple links that indicate the location or path of a website. Simply posting a link can facilitate copyright infringement (Supreme Court ruling 2017Do19025, September 9, 2021). Therefore, if the links or referenced websites you post are inappropriate, NMOMENT may delete them immediately. NMOMENT will monitor, edit, or remove members' UGC only to the maximum extent permitted by applicable law. Members agree not to hold NMOMENT liable for damages arising from UGC related to themselves or other members (including but not limited to defamation, harassment, or losses/damages related to false warranties).
+VIDEOIT may monitor, approve, verify, or pre-block UGC posted by members. VIDEOIT reserves the right, at its discretion, to remove, block, edit, move, or deactivate members' UGC. Specifically, if a member posts inappropriate UGC on VIDEOIT, VIDEOIT may delete the UGC as quickly as possible (within a maximum of 24 hours). Members can also report inappropriate UGC from other members to the VIDEOIT monitoring team. If a member's UGC contains links to content outside the website, the member must ensure that the content of the links and the external website are appropriate for the community. This rule applies not only to "embedded links" where videos automatically play upon clicking but also to simple links that indicate the location or path of a website. Simply posting a link can facilitate copyright infringement (Supreme Court ruling 2017Do19025, September 9, 2021). Therefore, if the links or referenced websites you post are inappropriate, VIDEOIT may delete them immediately. VIDEOIT will monitor, edit, or remove members' UGC only to the maximum extent permitted by applicable law. Members agree not to hold VIDEOIT liable for damages arising from UGC related to themselves or other members (including but not limited to defamation, harassment, or losses/damages related to false warranties).
 
-Members agree that the UGC they provide (i) does not currently or in the future infringe on any third party's intellectual property rights or rights of others (including but not limited to moral rights), and (ii) that when using the UGC in the manner specified in this agreement, they will not need to pay any royalties or consider third parties in the future. Members may not upload or post UGC that infringes on third-party copyrights, trademarks, or other intellectual property rights, nor may they upload UGC that infringes on third-party privacy or publicity rights, and members cannot be required to pay royalties or consider other matters to third parties regarding their UGC. Members are responsible for all of their UGC, including the transmission, posting, or other provision of text, files, links, software, photos, videos, sounds, music, or other information or materials. Members may only upload UGC that they have created themselves. Do not upload someone else's UGC to NMOMENT.
+Members agree that the UGC they provide (i) does not currently or in the future infringe on any third party's intellectual property rights or rights of others (including but not limited to moral rights), and (ii) that when using the UGC in the manner specified in this agreement, they will not need to pay any royalties or consider third parties in the future. Members may not upload or post UGC that infringes on third-party copyrights, trademarks, or other intellectual property rights, nor may they upload UGC that infringes on third-party privacy or publicity rights, and members cannot be required to pay royalties or consider other matters to third parties regarding their UGC. Members are responsible for all of their UGC, including the transmission, posting, or other provision of text, files, links, software, photos, videos, sounds, music, or other information or materials. Members may only upload UGC that they have created themselves. Do not upload someone else's UGC to VIDEOIT.
 
-Members agree to grant NMOMENT the right to allow all NMOMENT members to access and use their UGC without additional notice, attribution, or compensation to the member, to the extent that they permit access and use to other members.
+Members agree to grant VIDEOIT the right to allow all VIDEOIT members to access and use their UGC without additional notice, attribution, or compensation to the member, to the extent that they permit access and use to other members.
 
-NMOMENT collects content, communications, and other information provided by members when they use NMOMENT (including account registration, content creation or sharing, messaging, or communication with others). This may include information related to the content provided by the member, such as the location where a photo was taken or the date a file was created (metadata). It may also include information displayed through features provided by NMOMENT, such as cameras.
+VIDEOIT collects content, communications, and other information provided by members when they use VIDEOIT (including account registration, content creation or sharing, messaging, or communication with others). This may include information related to the content provided by the member, such as the location where a photo was taken or the date a file was created (metadata). It may also include information displayed through features provided by VIDEOIT, such as cameras.
 
-Members may share information about themselves on NMOMENT. In this case, any NMOMENT member can access that information and associate it with the member who posted it. NMOMENT does not guarantee the accuracy, efficacy, or truthfulness of the UGC created by members. Such features may include UGC uploads or submissions, comparison of statistics/personal bests/rankings with themselves and other users, and searching for other users by username. However, if UGC such as statistics/personal bests/rankings created by members violates NMOMENT’s UGC policy, NMOMENT may delete such UGC at any time.`,
+Members may share information about themselves on VIDEOIT. In this case, any VIDEOIT member can access that information and associate it with the member who posted it. VIDEOIT does not guarantee the accuracy, efficacy, or truthfulness of the UGC created by members. Such features may include UGC uploads or submissions, comparison of statistics/personal bests/rankings with themselves and other users, and searching for other users by username. However, if UGC such as statistics/personal bests/rankings created by members violates VIDEOIT’s UGC policy, VIDEOIT may delete such UGC at any time.`,
   },
   {
     bold: true,
@@ -712,7 +712,7 @@ For the following types of content, a sensitive content warning screen will be i
 
 Videos or photos depicting a child being vigorously soaked in a religious ritual context.
 Additional information and/or context may be required for enforcement according to community guidelines.
-NMOMENT will insert warning labels on content that may be sensitive, such as:
+VIDEOIT will insert warning labels on content that may be sensitive, such as:
 
 Images depicting naked children in the context of famine, genocide, war crimes, or humanitarian crimes, posted by news organizations (unless a violation caption has been inserted or shared in relation to a violation, in which case the content will be removed).
 Furthermore, upon receiving reports from news media partners, NGOs, or other trusted safety partners, images depicting the aftermath of non-sexual child abuse may be removed.`,
@@ -727,7 +727,7 @@ Furthermore, upon receiving reports from news media partners, NGOs, or other tru
   },
   {
     bold: false,
-    text: `As stated in Article 8 of our community guidelines regarding sexual abuse against adults, NMOMENT may be used to discuss sexual violence and exploitation and to raise awareness on these topics. We recognize the importance of these discussions and hope for active dialogue. We also wish to discuss the advocacy for sex workers' rights and regulations related to sex work. However, any content that promotes, encourages, or facilitates sexual encounters or commercial sexual services will be rejected. This is a measure to prevent the activation of transactions that may relate to trafficking, coercion, and non-consensual sexual acts.
+    text: `As stated in Article 8 of our community guidelines regarding sexual abuse against adults, VIDEOIT may be used to discuss sexual violence and exploitation and to raise awareness on these topics. We recognize the importance of these discussions and hope for active dialogue. We also wish to discuss the advocacy for sex workers' rights and regulations related to sex work. However, any content that promotes, encourages, or facilitates sexual encounters or commercial sexual services will be rejected. This is a measure to prevent the activation of transactions that may relate to trafficking, coercion, and non-consensual sexual acts.
 
 Additionally, we restrict explicit sexual expressions that may lead to solicitation for sex work. This type of content may be sensitive for some users within the global community and could hinder communication with friends or the broader community.
 
@@ -746,7 +746,7 @@ Offering or requesting sexual intercourse or sexual partners (including partners
 Chatting or conversing about sexual intercourse
 Nude photos/videos/images/sexual fetish items
 Sexual slang
-NMOMENT allows the expression of desires for sexual acts, the promotion of sex education, discussions about sexual acts or experiences, teaching sexual skills, or providing classes or programs to discuss sex, provided they imply or indirectly offer or request solicitation for sex work while meeting all the following criteria. If both criteria are not met, it will be considered a violation. For example, if a hand-drawn image depicts a sexual act but does not request or offer solicitation for sex work, it will not violate this provision.
+VIDEOIT allows the expression of desires for sexual acts, the promotion of sex education, discussions about sexual acts or experiences, teaching sexual skills, or providing classes or programs to discuss sex, provided they imply or indirectly offer or request solicitation for sex work while meeting all the following criteria. If both criteria are not met, it will be considered a violation. For example, if a hand-drawn image depicts a sexual act but does not request or offer solicitation for sex work, it will not violate this provision.
 `,
   },
   {
@@ -825,7 +825,7 @@ Content that provides or promotes smuggling.`,
   },
   {
     bold: false,
-    text: `NMOMENT removes content that has the potential to cause real harm. This includes the sale of adult products, hate speech, harassment and bullying, as well as misinformation that poses a risk of immediate violence or physical injury. Actions are taken in accordance with NMOMENT’s policies.
+    text: `VIDEOIT removes content that has the potential to cause real harm. This includes the sale of adult products, hate speech, harassment and bullying, as well as misinformation that poses a risk of immediate violence or physical injury. Actions are taken in accordance with VIDEOIT’s policies.
 
 `,
   },
@@ -835,7 +835,7 @@ Content that provides or promotes smuggling.`,
   },
   {
     bold: false,
-    text: `NMOMENT is a space where people can freely express themselves and inspire each other. Please help us continue to create a safe and trustworthy NMOMENT together. You can only post photos and videos that you own, and you must always comply with the law. Respect other NMOMENT users and do not send spam or post nude images.`,
+    text: `VIDEOIT is a space where people can freely express themselves and inspire each other. Please help us continue to create a safe and trustworthy VIDEOIT together. You can only post photos and videos that you own, and you must always comply with the law. Respect other VIDEOIT users and do not send spam or post nude images.`,
   },
   {
     bold: true,
@@ -843,58 +843,58 @@ Content that provides or promotes smuggling.`,
   },
   {
     bold: false,
-    text: `NMOMENT Community Guidelines
+    text: `VIDEOIT Community Guidelines
 
-NMOMENT is a space created by people from diverse cultures, ages, and beliefs. We always strive to thoughtfully consider various perspectives to create a space where everyone from different backgrounds can safely and enjoyably participate.
+VIDEOIT is a space created by people from diverse cultures, ages, and beliefs. We always strive to thoughtfully consider various perspectives to create a space where everyone from different backgrounds can safely and enjoyably participate.
 
-The community guidelines are policies established to keep our valuable community safe and protected. By using NMOMENT, you agree to these guidelines and terms of service. Please help ensure that everyone can enjoy NMOMENT. Violations of these guidelines may result in content removal or account deactivation.
+The community guidelines are policies established to keep our valuable community safe and protected. By using VIDEOIT, you agree to these guidelines and terms of service. Please help ensure that everyone can enjoy VIDEOIT. Violations of these guidelines may result in content removal or account deactivation.
 
-For this reason, content that may be shareable or serve the public interest may be permitted even if it somewhat contradicts the NMOMENT community guidelines, depending on the circumstances. However, NMOMENT will allow such content after carefully weighing its public interest value against the potential risks of harm, referencing international human rights regulations for judgment.
+For this reason, content that may be shareable or serve the public interest may be permitted even if it somewhat contradicts the VIDEOIT community guidelines, depending on the circumstances. However, VIDEOIT will allow such content after carefully weighing its public interest value against the potential risks of harm, referencing international human rights regulations for judgment.
 
 Share only photos and videos that you have taken or have permission to share.
-You always retain ownership of the content you post on NMOMENT. You must post original content and cannot post content that you do not have the right to copy or gather from the internet. Learn more about intellectual property rights.
+You always retain ownership of the content you post on VIDEOIT. You must post original content and cannot post content that you do not have the right to copy or gather from the internet. Learn more about intellectual property rights.
 
 Post photos and videos that everyone can enjoy.
-While there may be instances where individuals wish to share nude images for artistic or creative expression, NMOMENT does not permit nude images for various reasons. This includes photos and videos depicting sexual acts or genitalia, close-ups of fully exposed buttocks, and digital creations. Photos of women's nipples are also included. Images of paintings or sculptures that depict nudity are not permitted.
+While there may be instances where individuals wish to share nude images for artistic or creative expression, VIDEOIT does not permit nude images for various reasons. This includes photos and videos depicting sexual acts or genitalia, close-ups of fully exposed buttocks, and digital creations. Photos of women's nipples are also included. Images of paintings or sculptures that depict nudity are not permitted.
 
-People often want to share photos or videos of their children. However, for safety reasons, NMOMENT may delete images or partial images of children's nudity. This is because such content can be utilized by others in unexpected ways, even if shared with good intentions.
+People often want to share photos or videos of their children. However, for safety reasons, VIDEOIT may delete images or partial images of children's nudity. This is because such content can be utilized by others in unexpected ways, even if shared with good intentions.
 
 Participate in meaningful and genuine interactions.
-Help make NMOMENT free of spam. Avoid artificially collecting likes, followers, or shares, repeatedly flooding comments or content, or contacting people repeatedly for commercial purposes without consent. You should not offer money or gifts in exchange for likes, follows, comments, or other engagements. You must not engage in or promote content that provides, solicits, or facilitates misleading or deceptive user reviews or ratings.
+Help make VIDEOIT free of spam. Avoid artificially collecting likes, followers, or shares, repeatedly flooding comments or content, or contacting people repeatedly for commercial purposes without consent. You should not offer money or gifts in exchange for likes, follows, comments, or other engagements. You must not engage in or promote content that provides, solicits, or facilitates misleading or deceptive user reviews or ratings.
 
-While NMOMENT does not require you to use your real name, NMOMENT users must provide accurate and up-to-date information. Do not impersonate others or create accounts with the intention of violating the guidelines or causing misunderstandings.
+While VIDEOIT does not require you to use your real name, VIDEOIT users must provide accurate and up-to-date information. Do not impersonate others or create accounts with the intention of violating the guidelines or causing misunderstandings.
 
 Comply with the law.
-NMOMENT is not a space that advocates for or supports terrorist organizations, criminal organizations, or hostile groups based on race/religion. The provision of sexual services, the sale or purchase of weapons, alcohol, or tobacco products between individuals, and the sale and purchase of non-medical or prescription drugs are also not permitted. Furthermore, content attempting to trade, facilitate, donate, gift, or request non-medical drugs, and content acknowledging the personal use of non-medical drugs (except when used for recovery) will be removed. NMOMENT also prohibits the sale of live animals between individuals, though retailers may provide such sales. There can be no facilitation of poaching or the sale of endangered species or their parts.
+VIDEOIT is not a space that advocates for or supports terrorist organizations, criminal organizations, or hostile groups based on race/religion. The provision of sexual services, the sale or purchase of weapons, alcohol, or tobacco products between individuals, and the sale and purchase of non-medical or prescription drugs are also not permitted. Furthermore, content attempting to trade, facilitate, donate, gift, or request non-medical drugs, and content acknowledging the personal use of non-medical drugs (except when used for recovery) will be removed. VIDEOIT also prohibits the sale of live animals between individuals, though retailers may provide such sales. There can be no facilitation of poaching or the sale of endangered species or their parts.
 
 Always remember that any sale or purchase of regulated products must comply with the law. Accounts promoting online gambling, online skill games with cash transactions, or online lottery must obtain written permission before using the products.
 
 Sharing sexual content involving minors or threatening to post images that could cause sexual humiliation to participants is strictly prohibited under any circumstances.
 
-Respect your fellow community members who use NMOMENT.
-NMOMENT aims to foster a positive and diverse community culture. Accordingly, we will delete content that includes threats or hate speech, content that defames or shames specific individuals, exposure of personal information for the purpose of extortion or harassment, and unwanted repetitive messages. Intense discussions about individuals who receive public attention due to their profession or specific activities are generally permitted.
+Respect your fellow community members who use VIDEOIT.
+VIDEOIT aims to foster a positive and diverse community culture. Accordingly, we will delete content that includes threats or hate speech, content that defames or shames specific individuals, exposure of personal information for the purpose of extortion or harassment, and unwanted repetitive messages. Intense discussions about individuals who receive public attention due to their profession or specific activities are generally permitted.
 
 Acts of violence or attacks against someone based on their race, ethnicity, nationality, gender, age, gender identity, sexual orientation, religion, disability, or illness are never permitted. However, hate speech shared with the clear intention of opposing or raising awareness may be permitted.
 
 Do not glorify self-harm; provide support.
-NMOMENT is a caring community where individuals with difficult issues, such as eating disorders and self-harm, can come together to recognize problems or seek help. NMOMENT strives to support education for these individuals on the app and provide related information through customer service to ensure they can receive the necessary assistance.
+VIDEOIT is a caring community where individuals with difficult issues, such as eating disorders and self-harm, can come together to recognize problems or seek help. VIDEOIT strives to support education for these individuals on the app and provide related information through customer service to ensure they can receive the necessary assistance.
 
 Encouraging or promoting self-harm is a behavior that exacerbates the problem, and accounts may be deleted or deactivated upon receipt of reports related to this issue. Additionally, content that exposes or mocks the identity of individuals who self-harm will be removed.
 
 Be cautious when posting significant events.
-Many people use NMOMENT to share events that can become significant issues. Such events may often include provocative images. Since NMOMENT is a space for people of various ages and backgrounds with differing ethnicities, values, and genders, videos containing provocative or violent scenes will be removed to ensure that everyone can use the platform comfortably.
+Many people use VIDEOIT to share events that can become significant issues. Such events may often include provocative images. Since VIDEOIT is a space for people of various ages and backgrounds with differing ethnicities, values, and genders, videos containing provocative or violent scenes will be removed to ensure that everyone can use the platform comfortably.
 
 Of course, there may be instances where individuals wish to share such content to raise awareness, critique, or educate. If you share content for such purposes, please include a warning regarding violent images with the photos. Sharing provocative images for the sake of sadistic enjoyment or glorifying violence is not permitted under any circumstances.
 
 Help create a healthy community.
 
-The NMOMENT community is a place where valuable people come together. If you discover a post that violates the guidelines, please use the reporting options provided. The global team reviews reports to delete non-compliant content as quickly as possible. You can submit a report even if you do not have an NMOMENT account. When filling out a report, please provide as much detailed information as possible, such as links, usernames, and descriptions of the content, to help us locate and review it quickly. If images or related phrases do not adhere to the guidelines, the entire post may be removed.
+The VIDEOIT community is a place where valuable people come together. If you discover a post that violates the guidelines, please use the reporting options provided. The global team reviews reports to delete non-compliant content as quickly as possible. You can submit a report even if you do not have an VIDEOIT account. When filling out a report, please provide as much detailed information as possible, such as links, usernames, and descriptions of the content, to help us locate and review it quickly. If images or related phrases do not adhere to the guidelines, the entire post may be removed.
 
 Simply disliking content does not constitute a violation of community guidelines. If you encounter content you dislike, you can unfollow or block the person who posted it. If you dislike a comment on a post, you can delete that comment.
 
 Direct communication between community members often resolves disputes or misunderstandings. If someone else has posted your photos or videos, request their removal by commenting on the post. If that does not resolve the issue, please submit a copyright infringement report. If you believe someone has infringed upon your trademark, you may submit a trademark report. Avoid actions that draw attention to the poster, such as posting screenshots targeting that person, as this can be seen as harassment.
 
-NMOMENT may cooperate with judicial authorities to take appropriate action if there is a suspicion of physical threats against others or direct threats to public safety.`,
+VIDEOIT may cooperate with judicial authorities to take appropriate action if there is a suspicion of physical threats against others or direct threats to public safety.`,
   },
   {
     bold: true,
@@ -903,7 +903,7 @@ NMOMENT may cooperate with judicial authorities to take appropriate action if th
   {
     bold: false,
     text: `
-The NMOMENT program (hereinafter referred to as "the Program") is provided on NMOMENT (hereinafter referred to as "the Platform") to allow users to access content and utilize text, video, and voice chat functions among users. This Program is available to users aged 18 and older who utilize this service, and the following conditions of this virtual item policy apply. If you are under 18 years of age, you may not participate in this Program.
+The VIDEOIT program (hereinafter referred to as "the Program") is provided on VIDEOIT (hereinafter referred to as "the Platform") to allow users to access content and utilize text, video, and voice chat functions among users. This Program is available to users aged 18 and older who utilize this service, and the following conditions of this virtual item policy apply. If you are under 18 years of age, you may not participate in this Program.
 
 Users eligible to participate in this Program are as follows:
 
@@ -1037,7 +1037,7 @@ Request information necessary for custom production of products and service prov
   },
   {
     bold: false,
-    text: `This agreement is aimed at defining the rights, obligations, and responsibilities between creators (including all forms of content creators hereinafter referred to as "Creators") and Fantasy Innovation Ltd. (hereinafter referred to as "Company") regarding the use of the "NMOMENT service" provided on the Internet (applications). Therefore, the following contract (hereinafter referred to as "this Agreement") is established.
+    text: `This agreement is aimed at defining the rights, obligations, and responsibilities between creators (including all forms of content creators hereinafter referred to as "Creators") and Fantasy Innovation Ltd. (hereinafter referred to as "Company") regarding the use of the "VIDEOIT service" provided on the Internet (applications). Therefore, the following contract (hereinafter referred to as "this Agreement") is established.
 `,
   },
   {
@@ -1046,7 +1046,7 @@ Request information necessary for custom production of products and service prov
   },
   {
     bold: false,
-    text: `“NMOMENT Service” refers to the service provided by the "Company" that allows "Creators" to receive credits from an unspecified number of users who purchase their creations through the online platform operated by the "Company."
+    text: `“VIDEOIT Service” refers to the service provided by the "Company" that allows "Creators" to receive credits from an unspecified number of users who purchase their creations through the online platform operated by the "Company."
 
 “User” refers to an individual who agrees to these terms and is granted the eligibility to use the services provided by the "Company."
 
@@ -1097,10 +1097,10 @@ Creators have the right to disagree with the revised terms, and if they do not e
   },
   {
     bold: false,
-    text: `① The Company shall provide the "NMOMENT Service" on a continuous basis as a principle.
+    text: `① The Company shall provide the "VIDEOIT Service" on a continuous basis as a principle.
 ② The Company's obligations are as follows:
 
-Technical measures necessary for the continuous provision of the NMOMENT service, including system construction, improvement, and system integration. However, in the event of any of the following circumstances, the Company may temporarily suspend the provision of all or part of the service without prior notice. In such cases, the Company will promptly notify users of the reason and duration of the suspension.
+Technical measures necessary for the continuous provision of the VIDEOIT service, including system construction, improvement, and system integration. However, in the event of any of the following circumstances, the Company may temporarily suspend the provision of all or part of the service without prior notice. In such cases, the Company will promptly notify users of the reason and duration of the suspension.
 (1) If the Company needs to conduct urgent system checks, expansions, replacements, maintenance, or construction.
 (2) If the Company deems it necessary to replace the service system with a new one.
 (3) If normal service provision is impossible due to failures in the system or other service facilities, or due to wired and wireless network failures.
@@ -1112,11 +1112,11 @@ Settlement for Creators.
 
 Payment of platform fees and other charges to the Company.
 Provision of information for settlement processing.
-Compliance with the content and usage guidelines stated in the "NMOMENT Operating Policy."
-All income generated from the "NMOMENT Service" and the responsibility for reporting and taxes related to it shall rest with the Creator.
+Compliance with the content and usage guidelines stated in the "VIDEOIT Operating Policy."
+All income generated from the "VIDEOIT Service" and the responsibility for reporting and taxes related to it shall rest with the Creator.
 ④ The Creator must not collect or induce payments from users in the following ways:
 
-Collecting or inducing payments without using the NMOMENT service.
+Collecting or inducing payments without using the VIDEOIT service.
 Collecting or inducing payments for the purpose of selling products.
 Collecting or inducing payments with the intent to refund the payment amount after currency exchange.
 Receiving or inducing payments through methods that include any unlawful reasons under current laws.
@@ -1151,7 +1151,7 @@ In this case, the settlement procedures and amounts will be discussed with the C
   },
   {
     bold: false,
-    text: `Fees are divided into platform fees, payment fees, and subscription fees. The platform fee is a fee necessary for operating the NMOMENT service and is determined by a contract agreed upon with the Creator before using the service; if not agreed upon, the default rate is set at 70%. The details of specific plans and fee rates follow the separate "NMOMENT Service Plan." The Company may change the contents and fee rates of the NMOMENT Service Plan specified in paragraph 2.
+    text: `Fees are divided into platform fees, payment fees, and subscription fees. The platform fee is a fee necessary for operating the VIDEOIT service and is determined by a contract agreed upon with the Creator before using the service; if not agreed upon, the default rate is set at 70%. The details of specific plans and fee rates follow the separate "VIDEOIT Service Plan." The Company may change the contents and fee rates of the VIDEOIT Service Plan specified in paragraph 2.
 
 Notwithstanding the provisions of paragraph 2, if there is a separate contract stipulating a different platform fee rate or a discount rate for partner contracts, the platform fee rate and discount rate specified in that contract will apply. If the Creator’s fee is changed, the new platform fee will apply to purchases made from the date prior to the change, starting from the time of membership registration.
 
@@ -1159,7 +1159,7 @@ The payment fee refers to the fees charged by payment agencies for processing tr
 
 All fees are subject to value-added tax. However, if the Creator does not upload posts for more than one month, the account may change to a dormant status, and earnings will not be added during the dormant period.
 
-Additionally, if the Creator uses subscription-based platforms like "라이키", "팬트리", or "팬딩" simultaneously with NMOMENT, the NMOMENT platform fee may increase up to 95%.
+Additionally, if the Creator uses subscription-based platforms like "라이키", "팬트리", or "팬딩" simultaneously with VIDEOIT, the VIDEOIT platform fee may increase up to 95%.
 `,
   },
   {
@@ -1186,7 +1186,7 @@ The platform fees will be notified through separate announcements and may be adj
 
 In the event that the Company is unable to receive the payment from Apple, Google, or any other payment gateway provider (PG), the corresponding settlement amount to the Creator may be withheld or not paid.
 
-Additionally, if the NMOMENT service is terminated, any outstanding balance of points or subscription money may not be paid out, and the Company shall not be liable for any unpaid settlement amount resulting from such termination.
+Additionally, if the VIDEOIT service is terminated, any outstanding balance of points or subscription money may not be paid out, and the Company shall not be liable for any unpaid settlement amount resulting from such termination.
     `,
   },
   {
@@ -1293,7 +1293,7 @@ Even after the termination or cancellation of this contract, the Company and the
   },
   {
     bold: false,
-    text: `NMOMENT (hereinafter referred to as "the Company") has established and implemented a youth protection policy to ensure that young people can grow into healthy individuals.
+    text: `VIDEOIT (hereinafter referred to as "the Company") has established and implemented a youth protection policy to ensure that young people can grow into healthy individuals.
 The Company is taking measures to prevent adolescents from accessing harmful information and will inform you of the actions being taken for youth protection through this youth protection policy.
     `,
   },
@@ -1332,7 +1332,7 @@ Users can refer to the section "4. Contact Information of the Youth Protection O
   },
   {
     bold: false,
-    text: `NMOMENT is committed to ensuring that adolescents can safely access quality information.
+    text: `VIDEOIT is committed to ensuring that adolescents can safely access quality information.
 Youth Protection Officer
 Name: KWON GUK WON
 Department: Operations Management Team

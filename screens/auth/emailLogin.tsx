@@ -199,6 +199,7 @@ export default function EmailLogin({
                     width: "80%",
                     height: "100%",
                   }}
+                  placeholderTextColor={"#c0c0c0"}
                   placeholder={
                     country === "ko"
                       ? `이메일을 입력하세요`
@@ -260,6 +261,7 @@ export default function EmailLogin({
                     width: "80%",
                     height: "100%",
                   }}
+                  placeholderTextColor={"#c0c0c0"}
                   placeholder={
                     country === "ko"
                       ? `비밀번호를 입력하세요`

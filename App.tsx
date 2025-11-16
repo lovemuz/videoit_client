@@ -555,6 +555,8 @@ function App({
           });
           connectSocket.current.on("tryConnectCall", (data: any) => {
             try {
+              
+              Alert.alert('111');
               const RoomId = data.RoomId;
               const you = data.you;
               const avgTime: number = data.avgTime;

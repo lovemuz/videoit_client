@@ -24,16 +24,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  if ([FIRApp defaultApp] == nil) {
+     [FIRApp configure];
+   }
+  
   [[NMCallKitBridge instance] configureCallKit];
   [[NMCallKitBridge instance] configurePushKit];
   
   [[FBSDKApplicationDelegate sharedInstance] application:application
                        didFinishLaunchingWithOptions:launchOptions];
 
-  if ([FIRApp defaultApp] == nil) {
-     [FIRApp configure];
-   }
-  self.moduleName = @"nmoment";
+
+  
+  self.moduleName = @"videoit";
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
 
@@ -135,7 +138,11 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
       imageView.frame = self.window.frame;
       imageView.contentMode =UIViewContentModeCenter;// UIViewContentModeScaleAspectFit;-> 화면꽉차게
       [uiViewController.view addSubview:imageView];
-      [uiViewController.view setBackgroundColor:[UIColor colorWithRed:255.0/255.0 green:13.0/255.0 blue:69.0/255.0 alpha:1.0]];
+      [uiViewController.view setBackgroundColor:
+        [UIColor colorWithRed:230.0/255.0
+                        green:190.0/255.0
+                         blue:80.0/255.0
+                        alpha:1.0]];
       
       [self.window.rootViewController addChildViewController:uiViewController];
       [self.window.rootViewController.view addSubview:uiViewController.view];

@@ -48,7 +48,7 @@ const textList = [
   {
     bold: false,
     text: `
-NMOMENT (hereinafter referred to as "the Company") takes the protection of users' personal information very seriously and complies with personal information protection regulations under laws such as the Personal Information Protection Act and the Act on Promotion of Information and Communications Network Utilization and Information Protection, etc. The Company clearly states its Privacy Policy below to inform users of how their personal information provided to the Company is used and what measures are taken to protect it.
+VIDEOIT (hereinafter referred to as "the Company") takes the protection of users' personal information very seriously and complies with personal information protection regulations under laws such as the Personal Information Protection Act and the Act on Promotion of Information and Communications Network Utilization and Information Protection, etc. The Company clearly states its Privacy Policy below to inform users of how their personal information provided to the Company is used and what measures are taken to protect it.
 
 The Company's Privacy Policy may be subject to change in accordance with amendments to laws and regulations, or changes to the Company’s terms and internal policies. In the event of such changes, the Company will notify users by posting the revised policy on the service screen or through individual notices.
 

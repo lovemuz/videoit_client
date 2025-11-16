@@ -1,5 +1,5 @@
 import React from "react";
-import {useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Platform,
   SafeAreaView,
@@ -22,11 +22,11 @@ import {
   KeyboardAvoidingView,
   Keyboard,
 } from "react-native";
-import {NotchProvider, NotchView} from "react-native-notchclear";
+import { NotchProvider, NotchView } from "react-native-notchclear";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import {KeyboardAwareScrollView} from "react-native-keyboard-aware-scroll-view";
-import {vw, vh, vmin, vmax} from "react-native-css-vh-vw";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { vw, vh, vmin, vmax } from "react-native-css-vh-vw";
 import LinearGradient from "react-native-linear-gradient";
 import Video from "react-native-video";
 //import {LinearTextGradient} from "react-native-text-gradient";
@@ -36,12 +36,12 @@ import Share from "react-native-share";
 import FastImage from "react-native-fast-image";
 import Clipboard from "@react-native-clipboard/clipboard";
 import api from "../../lib/api/api";
-import {PALETTE} from "../../lib/constant/palette";
+import { PALETTE } from "../../lib/constant/palette";
 import serverURL from "../../lib/constant/serverURL";
-import {useSafeAreaInsets} from "react-native-safe-area-context";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import axios from "axios";
 import EncryptedStorage from "react-native-encrypted-storage";
-import {CRYPTO_SECRET} from "@env";
+import { CRYPTO_SECRET } from "@env";
 import CryptoJS from "crypto-js";
 
 export default function PhoneLogin({
@@ -151,16 +151,16 @@ export default function PhoneLogin({
                     {country === "ko"
                       ? `전화번호 로그인`
                       : country === "ja"
-                      ? `電話番号ログイン`
-                      : country === "es"
-                      ? `Inicio de sesión con número de teléfono`
-                      : country === "fr"
-                      ? `Connexion par numéro de téléphone`
-                      : country === "id"
-                      ? `Login nomor telepon`
-                      : country === "zh"
-                      ? `手机号码登录`
-                      : `Phone number login`}
+                        ? `電話番号ログイン`
+                        : country === "es"
+                          ? `Inicio de sesión con número de teléfono`
+                          : country === "fr"
+                            ? `Connexion par numéro de téléphone`
+                            : country === "id"
+                              ? `Login nomor telepon`
+                              : country === "zh"
+                                ? `手机号码登录`
+                                : `Phone number login`}
                   </Text>
                 </View>
                 <View
@@ -200,20 +200,21 @@ export default function PhoneLogin({
                     height: "100%",
                     width: "80%",
                   }}
+                  placeholderTextColor={"#c0c0c0"}
                   placeholder={
                     country === "ko"
                       ? `전화번호 입력`
                       : country === "ja"
-                      ? `電話番号を入力`
-                      : country === "es"
-                      ? `Ingresa número telefónico`
-                      : country === "fr"
-                      ? `Entrez le numéro de téléphone`
-                      : country === "id"
-                      ? `Masukkan nomor telepon`
-                      : country === "zh"
-                      ? `输入电话号码`
-                      : `Enter phone number`
+                        ? `電話番号を入力`
+                        : country === "es"
+                          ? `Ingresa número telefónico`
+                          : country === "fr"
+                            ? `Entrez le numéro de téléphone`
+                            : country === "id"
+                              ? `Masukkan nomor telepon`
+                              : country === "zh"
+                                ? `输入电话号码`
+                                : `Enter phone number`
                   }></TextInput>
 
                 <TouchableOpacity
@@ -261,20 +262,21 @@ export default function PhoneLogin({
                   onChangeText={e => {
                     setPassword(e);
                   }}
+                  placeholderTextColor={"#c0c0c0"}
                   placeholder={
                     country === "ko"
                       ? `비밀번호를 입력하세요`
                       : country === "ja"
-                      ? `パスワードを入力してください`
-                      : country === "es"
-                      ? `porfavor ingrese una contraseña`
-                      : country === "fr"
-                      ? `Veuillez entrer un mot de passe`
-                      : country === "id"
-                      ? `Silakan masukkan kata sandi`
-                      : country === "zh"
-                      ? `请输入密码`
-                      : `Please enter a password`
+                        ? `パスワードを入力してください`
+                        : country === "es"
+                          ? `porfavor ingrese una contraseña`
+                          : country === "fr"
+                            ? `Veuillez entrer un mot de passe`
+                            : country === "id"
+                              ? `Silakan masukkan kata sandi`
+                              : country === "zh"
+                                ? `请输入密码`
+                                : `Please enter a password`
                   }></TextInput>
 
                 <TouchableOpacity
@@ -325,16 +327,16 @@ export default function PhoneLogin({
                     {country === "ko"
                       ? `비밀번호를 잊으셨나요?`
                       : country === "ja"
-                      ? `パスワードを忘れましたか？`
-                      : country === "es"
-                      ? `¿Olvidaste tu contraseña?`
-                      : country === "fr"
-                      ? `Mot de passe oublié?`
-                      : country === "id"
-                      ? `lupa kata sandi Anda?`
-                      : country === "zh"
-                      ? `忘记密码了吗？`
-                      : `Forgot your password?`}
+                        ? `パスワードを忘れましたか？`
+                        : country === "es"
+                          ? `¿Olvidaste tu contraseña?`
+                          : country === "fr"
+                            ? `Mot de passe oublié?`
+                            : country === "id"
+                              ? `lupa kata sandi Anda?`
+                              : country === "zh"
+                                ? `忘记密码了吗？`
+                                : `Forgot your password?`}
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -342,23 +344,23 @@ export default function PhoneLogin({
                 style={
                   password && phone
                     ? {
-                        justifyContent: "center",
-                        alignContent: "center",
-                        alignItems: "center",
-                        backgroundColor: PALETTE.COLOR_NAVY,
-                        height: vh(5.5),
-                        minHeight: 50,
-                        borderRadius: 50,
-                      }
+                      justifyContent: "center",
+                      alignContent: "center",
+                      alignItems: "center",
+                      backgroundColor: PALETTE.COLOR_NAVY,
+                      height: vh(5.5),
+                      minHeight: 50,
+                      borderRadius: 50,
+                    }
                     : {
-                        justifyContent: "center",
-                        alignContent: "center",
-                        alignItems: "center",
-                        backgroundColor: "#d0d0df",
-                        height: vh(5.5),
-                        minHeight: 50,
-                        borderRadius: 50,
-                      }
+                      justifyContent: "center",
+                      alignContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#d0d0df",
+                      height: vh(5.5),
+                      minHeight: 50,
+                      borderRadius: 50,
+                    }
                 }
                 onPress={async () => {
                   await axios
@@ -402,58 +404,58 @@ export default function PhoneLogin({
                           country === "ko"
                             ? "계정 밴"
                             : country === "ja"
-                            ? "アカウント禁止"
-                            : country === "es"
-                            ? "Cuenta suspendida"
-                            : country === "fr"
-                            ? "Compte banni"
-                            : country === "id"
-                            ? "Akun diblokir"
-                            : country === "zh"
-                            ? "账户封禁"
-                            : "Account ban",
+                              ? "アカウント禁止"
+                              : country === "es"
+                                ? "Cuenta suspendida"
+                                : country === "fr"
+                                  ? "Compte banni"
+                                  : country === "id"
+                                    ? "Akun diblokir"
+                                    : country === "zh"
+                                      ? "账户封禁"
+                                      : "Account ban",
                           country === "ko"
                             ? "계정 밴 관련 문의는 이메일 traveltofindlife@gmail.com 로 문의 주세요"
                             : country === "ja"
-                            ? "アカウントの禁止に関するお問い合わせは、メール traveltofindlife@gmail.com にご連絡ください"
-                            : country === "es"
-                            ? "Para consultas sobre la suspensión de la cuenta, envíe un correo a traveltofindlife@gmail.com"
-                            : country === "fr"
-                            ? "Pour toute question concernant le bannissement du compte, veuillez contacter traveltofindlife@gmail.com par email"
-                            : country === "id"
-                            ? "Untuk pertanyaan tentang pemblokiran akun, silakan hubungi email traveltofindlife@gmail.com"
-                            : country === "zh"
-                            ? "关于账户封禁的咨询，请发送电子邮件至 traveltofindlife@gmail.com"
-                            : "For account ban inquiries, please contact traveltofindlife@gmail.com via email",
+                              ? "アカウントの禁止に関するお問い合わせは、メール traveltofindlife@gmail.com にご連絡ください"
+                              : country === "es"
+                                ? "Para consultas sobre la suspensión de la cuenta, envíe un correo a traveltofindlife@gmail.com"
+                                : country === "fr"
+                                  ? "Pour toute question concernant le bannissement du compte, veuillez contacter traveltofindlife@gmail.com par email"
+                                  : country === "id"
+                                    ? "Untuk pertanyaan tentang pemblokiran akun, silakan hubungi email traveltofindlife@gmail.com"
+                                    : country === "zh"
+                                      ? "关于账户封禁的咨询，请发送电子邮件至 traveltofindlife@gmail.com"
+                                      : "For account ban inquiries, please contact traveltofindlife@gmail.com via email",
                         );
                       } else {
                         Alert.alert(
                           country === "ko"
                             ? `오류 발생`
                             : country === "ja"
-                            ? `エラーが発生しました`
-                            : country === "es"
-                            ? `Error ocurrido`
-                            : country === "fr"
-                            ? `Erreur détectée`
-                            : country === "id"
-                            ? `Kesalahan terjadi`
-                            : country === "zh"
-                            ? `发生错误`
-                            : `Error occurred`,
+                              ? `エラーが発生しました`
+                              : country === "es"
+                                ? `Error ocurrido`
+                                : country === "fr"
+                                  ? `Erreur détectée`
+                                  : country === "id"
+                                    ? `Kesalahan terjadi`
+                                    : country === "zh"
+                                      ? `发生错误`
+                                      : `Error occurred`,
                           country === "ko"
                             ? `아이디 혹은 비밀번호가 다릅니다.`
                             : country === "ja"
-                            ? `ユーザーIDまたはパスワードが異なります。`
-                            : country === "es"
-                            ? `El nombre de usuario o la contraseña son incorrectos.`
-                            : country === "fr"
-                            ? `Nom d'utilisateur ou mot de passe incorrect.`
-                            : country === "id"
-                            ? `Nama pengguna atau kata sandi salah.`
-                            : country === "zh"
-                            ? `用户名或密码不正确。`
-                            : `Username or password is incorrect.`,
+                              ? `ユーザーIDまたはパスワードが異なります。`
+                              : country === "es"
+                                ? `El nombre de usuario o la contraseña son incorrectos.`
+                                : country === "fr"
+                                  ? `Nom d'utilisateur ou mot de passe incorrect.`
+                                  : country === "id"
+                                    ? `Nama pengguna atau kata sandi salah.`
+                                    : country === "zh"
+                                      ? `用户名或密码不正确。`
+                                      : `Username or password is incorrect.`,
                         );
                       }
                     });
@@ -466,16 +468,16 @@ export default function PhoneLogin({
                   {country === "ko"
                     ? `로그인`
                     : country === "ja"
-                    ? `ログイン`
-                    : country === "es"
-                    ? `Iniciar sesión`
-                    : country === "fr"
-                    ? `Se connecter`
-                    : country === "id"
-                    ? `Masuk`
-                    : country === "zh"
-                    ? `登录`
-                    : `Sign in`}
+                      ? `ログイン`
+                      : country === "es"
+                        ? `Iniciar sesión`
+                        : country === "fr"
+                          ? `Se connecter`
+                          : country === "id"
+                            ? `Masuk`
+                            : country === "zh"
+                              ? `登录`
+                              : `Sign in`}
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity
@@ -500,16 +502,16 @@ export default function PhoneLogin({
                   {country === "ko"
                     ? `아직 계정이 없으신가요?`
                     : country === "ja"
-                    ? `まだアカウントをお持ちでないですか？`
-                    : country === "es"
-                    ? `¿Aún no tienes una cuenta?`
-                    : country === "fr"
-                    ? `Vous n'avez pas encore de compte ?`
-                    : country === "id"
-                    ? `Belum punya akun?`
-                    : country === "zh"
-                    ? `您还没有帐户吗？`
-                    : `Don't have an account yet?`}
+                      ? `まだアカウントをお持ちでないですか？`
+                      : country === "es"
+                        ? `¿Aún no tienes una cuenta?`
+                        : country === "fr"
+                          ? `Vous n'avez pas encore de compte ?`
+                          : country === "id"
+                            ? `Belum punya akun?`
+                            : country === "zh"
+                              ? `您还没有帐户吗？`
+                              : `Don't have an account yet?`}
                 </Text>
                 <Text
                   style={{
@@ -519,16 +521,16 @@ export default function PhoneLogin({
                   {country === "ko"
                     ? `회원가입`
                     : country === "ja"
-                    ? `新規登録`
-                    : country === "es"
-                    ? `Registro`
-                    : country === "fr"
-                    ? `S'inscrire`
-                    : country === "id"
-                    ? `Daftar`
-                    : country === "zh"
-                    ? `注册`
-                    : `Sign Up`}
+                      ? `新規登録`
+                      : country === "es"
+                        ? `Registro`
+                        : country === "fr"
+                          ? `S'inscrire`
+                          : country === "id"
+                            ? `Daftar`
+                            : country === "zh"
+                              ? `注册`
+                              : `Sign Up`}
                 </Text>
               </TouchableOpacity>
             </View>

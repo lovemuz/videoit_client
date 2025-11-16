@@ -41,7 +41,7 @@ import serverURL from "../../lib/constant/serverURL";
 import { appleAuth } from "@invertase/react-native-apple-authentication";
 import jwtDecode from "jwt-decode";
 import EncryptedStorage from "react-native-encrypted-storage";
-import { CRYPTO_SECRET } from "@env";
+//import { CRYPTO_SECRET } from "@env";
 import CryptoJS from "crypto-js";
 
 import {
@@ -99,6 +99,9 @@ export default function Login({
   const insets = useSafeAreaInsets();
   const isLoadingRef = useRef(false);
 
+  const CRYPTO_SECRET = "vifsadfaedo21if13tw31312112faf";
+  console.log("CRYPTO_SECRET exists:", !!CRYPTO_SECRET);
+
   useEffect(() => {
     GoogleSignin.configure({
       webClientId:
@@ -125,6 +128,8 @@ export default function Login({
           const sns = "google";
           const snsId = res.additionalUserInfo.profile.sub;
 
+          console.log(email, sns, snsId);
+
           //Sns 로그인시 계정 한번 체크 -> 있다면 a. 진행하여 로그인 진행
           await axios
             .post(`${serverURL}/user/snsUserCheck`, {
@@ -133,6 +138,7 @@ export default function Login({
               snsId,
             })
             .then(async res => {
+              console.log(res.data);
               if (res.data.status === "true") {
                 const accessToken: any = res.data.accessToken;
                 const refreshToken: any = res.data.refreshToken;
@@ -305,7 +311,7 @@ export default function Login({
               const point = res.data?.point;
               updateUser(user);
               updatePoint(point);
-              navigation.navigate("Live");
+              navigation.navigate("Home");
             } else if (res.data.status === "ban") {
               Alert.alert(
                 country === "ko"
@@ -699,18 +705,18 @@ export default function Login({
                   fontSize: 11,
                 }}>
                 {country === "ko"
-                  ? `회원가입시 nmoment의 개인정보 처리방침과`
+                  ? `회원가입시 videoit의 개인정보 처리방침과`
                   : country === "ja"
-                    ? `nmomentの個人情報処理ポリシーと登録時に`
+                    ? `videoitの個人情報処理ポリシーと登録時に`
                     : country === "es"
-                      ? `Política de privacidad y condiciones de registro de nmoment`
+                      ? `Política de privacidad y condiciones de registro de videoit`
                       : country === "fr"
-                        ? `Politique de confidentialité et conditions d'inscription de nmoment`
+                        ? `Politique de confidentialité et conditions d'inscription de videoit`
                         : country === "id"
-                          ? `Kebijakan privasi nmoment dan syarat pendaftaran`
+                          ? `Kebijakan privasi videoit dan syarat pendaftaran`
                           : country === "zh"
-                            ? `nmoment的隐私政策和注册条款`
-                            : `nmoment's privacy policy and registration terms`}
+                            ? `videoit的隐私政策和注册条款`
+                            : `videoit's privacy policy and registration terms`}
               </Text>
               <Text
                 style={{

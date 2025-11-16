@@ -213,6 +213,7 @@ export default function ProfileModal({
         calling,
       })
       .then(async res => {
+        console.log(res.data);
         if (res.data.status === "stopOnlySelf") {
           callEndByMe.current = true;
           setCalling(false);

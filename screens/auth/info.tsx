@@ -1,5 +1,5 @@
 import React from "react";
-import {useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Platform,
   SafeAreaView,
@@ -22,11 +22,11 @@ import {
   KeyboardAvoidingView,
   Keyboard,
 } from "react-native";
-import {NotchProvider, NotchView} from "react-native-notchclear";
+import { NotchProvider, NotchView } from "react-native-notchclear";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import {launchCamera, launchImageLibrary} from "react-native-image-picker";
-import {KeyboardAwareScrollView} from "react-native-keyboard-aware-scroll-view";
-import {vw, vh, vmin, vmax} from "react-native-css-vh-vw";
+import { launchCamera, launchImageLibrary } from "react-native-image-picker";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { vw, vh, vmin, vmax } from "react-native-css-vh-vw";
 import CheckBox from "@react-native-community/checkbox";
 import LinearGradient from "react-native-linear-gradient";
 import Video from "react-native-video";
@@ -37,16 +37,16 @@ import Share from "react-native-share";
 import FastImage from "react-native-fast-image";
 import Clipboard from "@react-native-clipboard/clipboard";
 import api from "../../lib/api/api";
-import {PALETTE} from "../../lib/constant/palette";
+import { PALETTE } from "../../lib/constant/palette";
 import serverURL from "../../lib/constant/serverURL";
-import {useSafeAreaInsets} from "react-native-safe-area-context";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import axios from "axios";
 import EncryptedStorage from "react-native-encrypted-storage";
-import {useDispatch} from "react-redux";
-import {CRYPTO_SECRET} from "@env";
+import { useDispatch } from "react-redux";
+//import { CRYPTO_SECRET } from "@env";
 import CryptoJS from "crypto-js";
 import Loading from "../reusable/loading";
-import {COUNTRY_LIST} from "../../lib/constant/country-constant";
+import { COUNTRY_LIST } from "../../lib/constant/country-constant";
 import analytics from "@react-native-firebase/analytics";
 
 const ageList = () => {
@@ -100,6 +100,10 @@ export default function Info({
   route?: any;
   appState?: any;
 }): JSX.Element {
+
+   const CRYPTO_SECRET = "vifsadfaedo21if13tw31312112faf";
+  console.log("CRYPTO_SECRET exists:", !!CRYPTO_SECRET);
+  
   const insets = useSafeAreaInsets();
 
   const ageData = ageList();
@@ -181,16 +185,16 @@ export default function Info({
                 {country === "ko"
                   ? `회원정보 입력`
                   : country === "ja"
-                  ? `会員情報入力`
-                  : country === "es"
-                  ? `Ingresar información del miembro`
-                  : country === "fr"
-                  ? `Saisie des informations du membre`
-                  : country === "id"
-                  ? `Masukkan informasi anggota`
-                  : country === "zh"
-                  ? `输入会员信息`
-                  : `Enter member information`}
+                    ? `会員情報入力`
+                    : country === "es"
+                      ? `Ingresar información del miembro`
+                      : country === "fr"
+                        ? `Saisie des informations du membre`
+                        : country === "id"
+                          ? `Masukkan informasi anggota`
+                          : country === "zh"
+                            ? `输入会员信息`
+                            : `Enter member information`}
               </Text>
             </View>
             <View
@@ -273,16 +277,16 @@ export default function Info({
                 {country === "ko"
                   ? `닉네임`
                   : country === "ja"
-                  ? `ニックネーム`
-                  : country === "es"
-                  ? `Apodo`
-                  : country === "fr"
-                  ? `Pseudo`
-                  : country === "id"
-                  ? `Nama panggilan`
-                  : country === "zh"
-                  ? `昵称`
-                  : `Nickname`}
+                    ? `ニックネーム`
+                    : country === "es"
+                      ? `Apodo`
+                      : country === "fr"
+                        ? `Pseudo`
+                        : country === "id"
+                          ? `Nama panggilan`
+                          : country === "zh"
+                            ? `昵称`
+                            : `Nickname`}
               </Text>
               <TextInput
                 style={{
@@ -292,6 +296,7 @@ export default function Info({
                   borderBottomWidth: 1,
                   color: "black",
                 }}
+                placeholderTextColor={"#c0c0c0"}
                 placeholder="홍길동"
                 value={nick}
                 onChangeText={e => {
@@ -311,16 +316,16 @@ export default function Info({
                     {country === "ko"
                       ? `이메일`
                       : country === "ja"
-                      ? `メールアドレス`
-                      : country === "es"
-                      ? `Correo electrónico`
-                      : country === "fr"
-                      ? `Adresse e-mail`
-                      : country === "id"
-                      ? `Surel`
-                      : country === "zh"
-                      ? `电子邮件`
-                      : `Email`}
+                        ? `メールアドレス`
+                        : country === "es"
+                          ? `Correo electrónico`
+                          : country === "fr"
+                            ? `Adresse e-mail`
+                            : country === "id"
+                              ? `Surel`
+                              : country === "zh"
+                                ? `电子邮件`
+                                : `Email`}
                   </Text>
                   <View
                     style={{
@@ -338,20 +343,21 @@ export default function Info({
                         width: "70%",
                         height: "100%",
                       }}
+                      placeholderTextColor={"#c0c0c0"}
                       placeholder={
                         country === "ko"
                           ? `이메일을 입력하세요`
                           : country === "ja"
-                          ? `メールアドレスを入力してください`
-                          : country === "es"
-                          ? `Por favor, introduzca su correo electrónico`
-                          : country === "fr"
-                          ? `Veuillez entrer votre adresse e-mail`
-                          : country === "id"
-                          ? `Silakan masukkan email Anda`
-                          : country === "zh"
-                          ? `请输入您的电子邮件`
-                          : `Please enter your email`
+                            ? `メールアドレスを入力してください`
+                            : country === "es"
+                              ? `Por favor, introduzca su correo electrónico`
+                              : country === "fr"
+                                ? `Veuillez entrer votre adresse e-mail`
+                                : country === "id"
+                                  ? `Silakan masukkan email Anda`
+                                  : country === "zh"
+                                    ? `请输入您的电子邮件`
+                                    : `Please enter your email`
                       }
                       value={email}
                       onChangeText={e => {
@@ -382,16 +388,16 @@ export default function Info({
                                 country === "ko"
                                   ? "이미 가입되어 있는 이메일 입니다."
                                   : country === "ja"
-                                  ? "すでに登録されているメールアドレスです"
-                                  : country === "es"
-                                  ? "El correo electrónico ya está registrado"
-                                  : country === "fr"
-                                  ? "L'adresse e-mail est déjà enregistrée"
-                                  : country === "id"
-                                  ? "Email sudah terdaftar"
-                                  : country === "zh"
-                                  ? "该邮箱已注册"
-                                  : "The email is already registered",
+                                    ? "すでに登録されているメールアドレスです"
+                                    : country === "es"
+                                      ? "El correo electrónico ya está registrado"
+                                      : country === "fr"
+                                        ? "L'adresse e-mail est déjà enregistrée"
+                                        : country === "id"
+                                          ? "Email sudah terdaftar"
+                                          : country === "zh"
+                                            ? "该邮箱已注册"
+                                            : "The email is already registered",
                               );
                             }
                           });
@@ -403,16 +409,16 @@ export default function Info({
                         {country === "ko"
                           ? `인증`
                           : country === "ja"
-                          ? `認証`
-                          : country === "es"
-                          ? `Autenticación`
-                          : country === "fr"
-                          ? `Authentification`
-                          : country === "id"
-                          ? `Otentikasi`
-                          : country === "zh"
-                          ? `认证`
-                          : `Authentication`}
+                            ? `認証`
+                            : country === "es"
+                              ? `Autenticación`
+                              : country === "fr"
+                                ? `Authentification`
+                                : country === "id"
+                                  ? `Otentikasi`
+                                  : country === "zh"
+                                    ? `认证`
+                                    : `Authentication`}
                       </Text>
                     </TouchableOpacity>
                   </View>
@@ -431,16 +437,16 @@ export default function Info({
                     {country === "ko"
                       ? `인증번호`
                       : country === "ja"
-                      ? `認証番号`
-                      : country === "es"
-                      ? `Código de autenticación`
-                      : country === "fr"
-                      ? `Code d'authentification`
-                      : country === "id"
-                      ? `Kode otentikasi`
-                      : country === "zh"
-                      ? `验证号码`
-                      : `Authentication code`}
+                        ? `認証番号`
+                        : country === "es"
+                          ? `Código de autenticación`
+                          : country === "fr"
+                            ? `Code d'authentification`
+                            : country === "id"
+                              ? `Kode otentikasi`
+                              : country === "zh"
+                                ? `验证号码`
+                                : `Authentication code`}
                   </Text>
                   <View
                     style={{
@@ -458,20 +464,21 @@ export default function Info({
                         width: "80%",
                         height: "100%",
                       }}
+                      placeholderTextColor={"#c0c0c0"}
                       placeholder={
                         country === "ko"
                           ? `인증코드를 입력하세요`
                           : country === "ja"
-                          ? `認証コードを入力してください`
-                          : country === "es"
-                          ? `Por favor, introduzca el código de autenticación`
-                          : country === "fr"
-                          ? `Veuillez entrer le code d'authentification`
-                          : country === "id"
-                          ? `Silakan masukkan kode otentikasi`
-                          : country === "zh"
-                          ? `请输入验证代码`
-                          : `Please enter the authentication code`
+                            ? `認証コードを入力してください`
+                            : country === "es"
+                              ? `Por favor, introduzca el código de autenticación`
+                              : country === "fr"
+                                ? `Veuillez entrer le code d'authentification`
+                                : country === "id"
+                                  ? `Silakan masukkan kode otentikasi`
+                                  : country === "zh"
+                                    ? `请输入验证代码`
+                                    : `Please enter the authentication code`
                       }
                       value={emailCode}
                       onChangeText={e => {
@@ -502,32 +509,32 @@ export default function Info({
                                 country === "ko"
                                   ? `인증 되었습니다.`
                                   : country === "ja"
-                                  ? `認証が完了しました。`
-                                  : country === "es"
-                                  ? `Autenticación exitosa.`
-                                  : country === "fr"
-                                  ? `Authentification réussie.`
-                                  : country === "id"
-                                  ? `Autentikasi berhasil.`
-                                  : country === "zh"
-                                  ? `认证成功。`
-                                  : `Authentication successful.`,
+                                    ? `認証が完了しました。`
+                                    : country === "es"
+                                      ? `Autenticación exitosa.`
+                                      : country === "fr"
+                                        ? `Authentification réussie.`
+                                        : country === "id"
+                                          ? `Autentikasi berhasil.`
+                                          : country === "zh"
+                                            ? `认证成功。`
+                                            : `Authentication successful.`,
                               );
                             } else {
                               Alert.alert(
                                 country === "ko"
                                   ? `인증코드가 다릅니다.`
                                   : country === "ja"
-                                  ? `認証コードが異なります。`
-                                  : country === "es"
-                                  ? `El código de autenticación es incorrecto.`
-                                  : country === "fr"
-                                  ? `Le code d'authentification est incorrect.`
-                                  : country === "id"
-                                  ? `Kode otentikasi berbeda.`
-                                  : country === "zh"
-                                  ? `验证码错误。`
-                                  : `Authentication code is incorrect.`,
+                                    ? `認証コードが異なります。`
+                                    : country === "es"
+                                      ? `El código de autenticación es incorrecto.`
+                                      : country === "fr"
+                                        ? `Le code d'authentification est incorrect.`
+                                        : country === "id"
+                                          ? `Kode otentikasi berbeda.`
+                                          : country === "zh"
+                                            ? `验证码错误。`
+                                            : `Authentication code is incorrect.`,
                               );
                             }
                           });
@@ -539,16 +546,16 @@ export default function Info({
                         {country === "ko"
                           ? `확인`
                           : country === "ja"
-                          ? `確認`
-                          : country === "es"
-                          ? `Confirmar`
-                          : country === "fr"
-                          ? `Confirmer`
-                          : country === "id"
-                          ? `Konfirmasi`
-                          : country === "zh"
-                          ? `确认`
-                          : `Confirm`}
+                            ? `確認`
+                            : country === "es"
+                              ? `Confirmar`
+                              : country === "fr"
+                                ? `Confirmer`
+                                : country === "id"
+                                  ? `Konfirmasi`
+                                  : country === "zh"
+                                    ? `确认`
+                                    : `Confirm`}
                       </Text>
                     </TouchableOpacity>
                   </View>
@@ -567,16 +574,16 @@ export default function Info({
                     {country === "ko"
                       ? `비밀번호`
                       : country === "ja"
-                      ? `パスワード`
-                      : country === "es"
-                      ? `Contraseña`
-                      : country === "fr"
-                      ? `Mot de passe`
-                      : country === "id"
-                      ? `Kata sandi`
-                      : country === "zh"
-                      ? `密码`
-                      : `Password`}
+                        ? `パスワード`
+                        : country === "es"
+                          ? `Contraseña`
+                          : country === "fr"
+                            ? `Mot de passe`
+                            : country === "id"
+                              ? `Kata sandi`
+                              : country === "zh"
+                                ? `密码`
+                                : `Password`}
                   </Text>
                   <View
                     style={{
@@ -595,20 +602,21 @@ export default function Info({
                         height: "100%",
                       }}
                       secureTextEntry={passwordShow}
+                      placeholderTextColor={"#c0c0c0"}
                       placeholder={
                         country === "ko"
                           ? `비밀번호를 입력하세요`
                           : country === "ja"
-                          ? `パスワードを入力してください`
-                          : country === "es"
-                          ? `Por favor, introduzca su contraseña`
-                          : country === "fr"
-                          ? `Veuillez entrer votre mot de passe`
-                          : country === "id"
-                          ? `Silakan masukkan kata sandi Anda`
-                          : country === "zh"
-                          ? `请输入您的密码`
-                          : `Please enter your password`
+                            ? `パスワードを入力してください`
+                            : country === "es"
+                              ? `Por favor, introduzca su contraseña`
+                              : country === "fr"
+                                ? `Veuillez entrer votre mot de passe`
+                                : country === "id"
+                                  ? `Silakan masukkan kata sandi Anda`
+                                  : country === "zh"
+                                    ? `请输入您的密码`
+                                    : `Please enter your password`
                       }
                       value={password}
                       onChangeText={e => {
@@ -714,16 +722,16 @@ export default function Info({
                 {country === "ko"
                   ? `나이`
                   : country === "ja"
-                  ? `年齢`
-                  : country === "es"
-                  ? `Edad`
-                  : country === "fr"
-                  ? `Âge`
-                  : country === "id"
-                  ? `Usia`
-                  : country === "zh"
-                  ? `年龄`
-                  : `Age`}
+                    ? `年齢`
+                    : country === "es"
+                      ? `Edad`
+                      : country === "fr"
+                        ? `Âge`
+                        : country === "id"
+                          ? `Usia`
+                          : country === "zh"
+                            ? `年龄`
+                            : `Age`}
               </Text>
               <SelectDropdown
                 defaultButtonText={age.toString()}
@@ -782,32 +790,32 @@ export default function Info({
                 {country === "ko"
                   ? `성별`
                   : country === "ja"
-                  ? `性別`
-                  : country === "es"
-                  ? `Género`
-                  : country === "fr"
-                  ? `Sexe`
-                  : country === "id"
-                  ? `Jenis kelamin`
-                  : country === "zh"
-                  ? `性别`
-                  : `Gender`}
+                    ? `性別`
+                    : country === "es"
+                      ? `Género`
+                      : country === "fr"
+                        ? `Sexe`
+                        : country === "id"
+                          ? `Jenis kelamin`
+                          : country === "zh"
+                            ? `性别`
+                            : `Gender`}
               </Text>
               <SelectDropdown
                 defaultButtonText={
                   country === "ko"
                     ? `성별`
                     : country === "ja"
-                    ? `性別`
-                    : country === "es"
-                    ? `Género`
-                    : country === "fr"
-                    ? `Sexe`
-                    : country === "id"
-                    ? `Jenis kelamin`
-                    : country === "zh"
-                    ? `性别`
-                    : `Gender`
+                      ? `性別`
+                      : country === "es"
+                        ? `Género`
+                        : country === "fr"
+                          ? `Sexe`
+                          : country === "id"
+                            ? `Jenis kelamin`
+                            : country === "zh"
+                              ? `性别`
+                              : `Gender`
                 }
                 buttonStyle={{
                   borderRadius: 10,
@@ -842,29 +850,29 @@ export default function Info({
                   country === "ko"
                     ? `여자`
                     : country === "ja"
-                    ? `女性`
-                    : country === "es"
-                    ? `Mujer`
-                    : country === "fr"
-                    ? `Femme`
-                    : country === "id"
-                    ? `Wanita`
-                    : country === "zh"
-                    ? `女性`
-                    : `Female`,
+                      ? `女性`
+                      : country === "es"
+                        ? `Mujer`
+                        : country === "fr"
+                          ? `Femme`
+                          : country === "id"
+                            ? `Wanita`
+                            : country === "zh"
+                              ? `女性`
+                              : `Female`,
                   country === "ko"
                     ? `남자`
                     : country === "ja"
-                    ? `男性`
-                    : country === "es"
-                    ? `Hombre`
-                    : country === "fr"
-                    ? `Homme`
-                    : country === "id"
-                    ? `Pria`
-                    : country === "zh"
-                    ? `男性`
-                    : `Male`,
+                      ? `男性`
+                      : country === "es"
+                        ? `Hombre`
+                        : country === "fr"
+                          ? `Homme`
+                          : country === "id"
+                            ? `Pria`
+                            : country === "zh"
+                              ? `男性`
+                              : `Male`,
                 ]}
                 onSelect={(selectedItem, index) => {
                   if (Number(index) === 1) {
@@ -904,16 +912,16 @@ export default function Info({
                     {country === "ko"
                       ? "당신은 만18세 이상입니까?"
                       : country === "ja"
-                      ? "あなたは18歳以上ですか？"
-                      : country === "es"
-                      ? "¿Tienes más de 18 años?"
-                      : country === "fr"
-                      ? "Avez-vous plus de 18 ans ?"
-                      : country === "id"
-                      ? "Apakah Anda berusia di atas 18 tahun?"
-                      : country === "zh"
-                      ? "您是否已满18岁？"
-                      : "Are you over 18?"}
+                        ? "あなたは18歳以上ですか？"
+                        : country === "es"
+                          ? "¿Tienes más de 18 años?"
+                          : country === "fr"
+                            ? "Avez-vous plus de 18 ans ?"
+                            : country === "id"
+                              ? "Apakah Anda berusia di atas 18 tahun?"
+                              : country === "zh"
+                                ? "您是否已满18岁？"
+                                : "Are you over 18?"}
                   </Text>
                   <CheckBox
                     tintColors={{
@@ -956,29 +964,29 @@ export default function Info({
                     country === "ko"
                       ? `입력 부족`
                       : country === "ja"
-                      ? `入力不足`
-                      : country === "es"
-                      ? `Falta de información`
-                      : country === "fr"
-                      ? `Données manquantes`
-                      : country === "id"
-                      ? `Data kurang lengkap`
-                      : country === "zh"
-                      ? `输入不足`
-                      : `Insufficient input`,
+                        ? `入力不足`
+                        : country === "es"
+                          ? `Falta de información`
+                          : country === "fr"
+                            ? `Données manquantes`
+                            : country === "id"
+                              ? `Data kurang lengkap`
+                              : country === "zh"
+                                ? `输入不足`
+                                : `Insufficient input`,
                     country === "ko"
                       ? "만18세 이상만 가입 가능합니다."
                       : country === "ja"
-                      ? "18歳以上のみ登録可能です。"
-                      : country === "es"
-                      ? "Solo pueden registrarse los mayores de 18 años."
-                      : country === "fr"
-                      ? "Seules les personnes de plus de 18 ans peuvent s'inscrire."
-                      : country === "id"
-                      ? "Hanya yang berusia di atas 18 tahun yang dapat mendaftar."
-                      : country === "zh"
-                      ? "仅限18岁以上的用户注册。"
-                      : "Only those 18 and older can register.",
+                        ? "18歳以上のみ登録可能です。"
+                        : country === "es"
+                          ? "Solo pueden registrarse los mayores de 18 años."
+                          : country === "fr"
+                            ? "Seules les personnes de plus de 18 ans peuvent s'inscrire."
+                            : country === "id"
+                              ? "Hanya yang berusia di atas 18 tahun yang dapat mendaftar."
+                              : country === "zh"
+                                ? "仅限18岁以上的用户注册。"
+                                : "Only those 18 and older can register.",
                   );
                   return;
                 }
@@ -987,29 +995,29 @@ export default function Info({
                     country === "ko"
                       ? `입력 부족`
                       : country === "ja"
-                      ? `入力不足`
-                      : country === "es"
-                      ? `Falta de información`
-                      : country === "fr"
-                      ? `Données manquantes`
-                      : country === "id"
-                      ? `Data kurang lengkap`
-                      : country === "zh"
-                      ? `输入不足`
-                      : `Insufficient input`,
+                        ? `入力不足`
+                        : country === "es"
+                          ? `Falta de información`
+                          : country === "fr"
+                            ? `Données manquantes`
+                            : country === "id"
+                              ? `Data kurang lengkap`
+                              : country === "zh"
+                                ? `输入不足`
+                                : `Insufficient input`,
                     country === "ko"
                       ? `성별을 선택해주세요`
                       : country === "ja"
-                      ? `性別を選択してください`
-                      : country === "es"
-                      ? `Por favor, elija su género`
-                      : country === "fr"
-                      ? `Veuillez sélectionner votre sexe`
-                      : country === "id"
-                      ? `Silakan pilih jenis kelamin Anda`
-                      : country === "zh"
-                      ? `请选择您的性别`
-                      : `Please select your gender`,
+                        ? `性別を選択してください`
+                        : country === "es"
+                          ? `Por favor, elija su género`
+                          : country === "fr"
+                            ? `Veuillez sélectionner votre sexe`
+                            : country === "id"
+                              ? `Silakan pilih jenis kelamin Anda`
+                              : country === "zh"
+                                ? `请选择您的性别`
+                                : `Please select your gender`,
                   );
 
                   return;
@@ -1018,29 +1026,29 @@ export default function Info({
                     country === "ko"
                       ? `입력 부족`
                       : country === "ja"
-                      ? `入力不足`
-                      : country === "es"
-                      ? `Falta de información`
-                      : country === "fr"
-                      ? `Données manquantes`
-                      : country === "id"
-                      ? `Data kurang lengkap`
-                      : country === "zh"
-                      ? `输入不足`
-                      : `Insufficient input`,
+                        ? `入力不足`
+                        : country === "es"
+                          ? `Falta de información`
+                          : country === "fr"
+                            ? `Données manquantes`
+                            : country === "id"
+                              ? `Data kurang lengkap`
+                              : country === "zh"
+                                ? `输入不足`
+                                : `Insufficient input`,
                     country === "ko"
                       ? `나이를 선택해주세요`
                       : country === "ja"
-                      ? `年齢を選択してください`
-                      : country === "es"
-                      ? `Por favor, elija su edad`
-                      : country === "fr"
-                      ? `Veuillez sélectionner votre âge`
-                      : country === "id"
-                      ? `Silakan pilih usia Anda`
-                      : country === "zh"
-                      ? `请选择您的年龄`
-                      : `Please select your age`,
+                        ? `年齢を選択してください`
+                        : country === "es"
+                          ? `Por favor, elija su edad`
+                          : country === "fr"
+                            ? `Veuillez sélectionner votre âge`
+                            : country === "id"
+                              ? `Silakan pilih usia Anda`
+                              : country === "zh"
+                                ? `请选择您的年龄`
+                                : `Please select your age`,
                   );
 
                   return;
@@ -1049,29 +1057,29 @@ export default function Info({
                     country === "ko"
                       ? `입력 부족`
                       : country === "ja"
-                      ? `入力不足`
-                      : country === "es"
-                      ? `Falta de información`
-                      : country === "fr"
-                      ? `Données manquantes`
-                      : country === "id"
-                      ? `Data kurang lengkap`
-                      : country === "zh"
-                      ? `输入不足`
-                      : `Insufficient input`,
+                        ? `入力不足`
+                        : country === "es"
+                          ? `Falta de información`
+                          : country === "fr"
+                            ? `Données manquantes`
+                            : country === "id"
+                              ? `Data kurang lengkap`
+                              : country === "zh"
+                                ? `输入不足`
+                                : `Insufficient input`,
                     country === "ko"
                       ? `이름을 입력해주세요`
                       : country === "ja"
-                      ? `名前を入力してください`
-                      : country === "es"
-                      ? `Por favor, introduzca su nombre`
-                      : country === "fr"
-                      ? `Veuillez entrer votre nom`
-                      : country === "id"
-                      ? `Silakan masukkan nama Anda`
-                      : country === "zh"
-                      ? `请输入您的姓名`
-                      : `Please enter your name`,
+                        ? `名前を入力してください`
+                        : country === "es"
+                          ? `Por favor, introduzca su nombre`
+                          : country === "fr"
+                            ? `Veuillez entrer votre nom`
+                            : country === "id"
+                              ? `Silakan masukkan nama Anda`
+                              : country === "zh"
+                                ? `请输入您的姓名`
+                                : `Please enter your name`,
                   );
 
                   return;
@@ -1080,29 +1088,29 @@ export default function Info({
                     country === "ko"
                       ? `입력 부족`
                       : country === "ja"
-                      ? `入力不足`
-                      : country === "es"
-                      ? `Falta de información`
-                      : country === "fr"
-                      ? `Données manquantes`
-                      : country === "id"
-                      ? `Data kurang lengkap`
-                      : country === "zh"
-                      ? `输入不足`
-                      : `Insufficient input`,
+                        ? `入力不足`
+                        : country === "es"
+                          ? `Falta de información`
+                          : country === "fr"
+                            ? `Données manquantes`
+                            : country === "id"
+                              ? `Data kurang lengkap`
+                              : country === "zh"
+                                ? `输入不足`
+                                : `Insufficient input`,
                     country === "ko"
                       ? `비밀번호를 입력해주세요`
                       : country === "ja"
-                      ? `パスワードを入力してください`
-                      : country === "es"
-                      ? `Por favor, introduzca su contraseña`
-                      : country === "fr"
-                      ? `Veuillez entrer votre mot de passe`
-                      : country === "id"
-                      ? `Silakan masukkan kata sandi Anda`
-                      : country === "zh"
-                      ? `请输入您的密码`
-                      : `Please enter your password`,
+                        ? `パスワードを入力してください`
+                        : country === "es"
+                          ? `Por favor, introduzca su contraseña`
+                          : country === "fr"
+                            ? `Veuillez entrer votre mot de passe`
+                            : country === "id"
+                              ? `Silakan masukkan kata sandi Anda`
+                              : country === "zh"
+                                ? `请输入您的密码`
+                                : `Please enter your password`,
                   );
 
                   return;
@@ -1111,29 +1119,29 @@ export default function Info({
                     country === "ko"
                       ? `입력 부족`
                       : country === "ja"
-                      ? `入力不足`
-                      : country === "es"
-                      ? `Falta de información`
-                      : country === "fr"
-                      ? `Données manquantes`
-                      : country === "id"
-                      ? `Data kurang lengkap`
-                      : country === "zh"
-                      ? `输入不足`
-                      : `Insufficient input`,
+                        ? `入力不足`
+                        : country === "es"
+                          ? `Falta de información`
+                          : country === "fr"
+                            ? `Données manquantes`
+                            : country === "id"
+                              ? `Data kurang lengkap`
+                              : country === "zh"
+                                ? `输入不足`
+                                : `Insufficient input`,
                     country === "ko"
                       ? `이메일을 입력해주세요`
                       : country === "ja"
-                      ? `メールアドレスを入力してください`
-                      : country === "es"
-                      ? `Por favor, introduzca su correo electrónico`
-                      : country === "fr"
-                      ? `Veuillez entrer votre adresse e-mail`
-                      : country === "id"
-                      ? `Silakan masukkan email Anda`
-                      : country === "zh"
-                      ? `请输入您的电子邮件`
-                      : `Please enter your email`,
+                        ? `メールアドレスを入力してください`
+                        : country === "es"
+                          ? `Por favor, introduzca su correo electrónico`
+                          : country === "fr"
+                            ? `Veuillez entrer votre adresse e-mail`
+                            : country === "id"
+                              ? `Silakan masukkan email Anda`
+                              : country === "zh"
+                                ? `请输入您的电子邮件`
+                                : `Please enter your email`,
                   );
 
                   return;
@@ -1142,29 +1150,29 @@ export default function Info({
                     country === "ko"
                       ? `입력 부족`
                       : country === "ja"
-                      ? `入力不足`
-                      : country === "es"
-                      ? `Falta de información`
-                      : country === "fr"
-                      ? `Données manquantes`
-                      : country === "id"
-                      ? `Data kurang lengkap`
-                      : country === "zh"
-                      ? `输入不足`
-                      : `Insufficient input`,
+                        ? `入力不足`
+                        : country === "es"
+                          ? `Falta de información`
+                          : country === "fr"
+                            ? `Données manquantes`
+                            : country === "id"
+                              ? `Data kurang lengkap`
+                              : country === "zh"
+                                ? `输入不足`
+                                : `Insufficient input`,
                     country === "ko"
                       ? `이메일 인증을 해주세요`
                       : country === "ja"
-                      ? `メールアドレスを認証してください`
-                      : country === "es"
-                      ? `Por favor, verifique su correo electrónico`
-                      : country === "fr"
-                      ? `Veuillez confirmer votre adresse e-mail`
-                      : country === "id"
-                      ? `Silakan verifikasi email Anda`
-                      : country === "zh"
-                      ? `请验证您的电子邮件`
-                      : `Please verify your email`,
+                        ? `メールアドレスを認証してください`
+                        : country === "es"
+                          ? `Por favor, verifique su correo electrónico`
+                          : country === "fr"
+                            ? `Veuillez confirmer votre adresse e-mail`
+                            : country === "id"
+                              ? `Silakan verifikasi email Anda`
+                              : country === "zh"
+                                ? `请验证您的电子邮件`
+                                : `Please verify your email`,
                   );
 
                   return;
@@ -1267,87 +1275,87 @@ export default function Info({
                             country === "ko"
                               ? `기존 계정이 있습니다.`
                               : country === "ja"
-                              ? `既存のアカウントがあります。`
-                              : country === "es"
-                              ? `Ya tiene una cuenta existente.`
-                              : country === "fr"
-                              ? `Vous avez déjà un compte existant.`
-                              : country === "id"
-                              ? `Anda sudah memiliki akun yang ada.`
-                              : country === "zh"
-                              ? `您已经有现有帐户。`
-                              : `You already have an existing account.`,
+                                ? `既存のアカウントがあります。`
+                                : country === "es"
+                                  ? `Ya tiene una cuenta existente.`
+                                  : country === "fr"
+                                    ? `Vous avez déjà un compte existant.`
+                                    : country === "id"
+                                      ? `Anda sudah memiliki akun yang ada.`
+                                      : country === "zh"
+                                        ? `您已经有现有帐户。`
+                                        : `You already have an existing account.`,
                             country === "ko"
                               ? `해당 번호로 로그인해주세요`
                               : country === "ja"
-                              ? `該当の番号でログインしてください`
-                              : country === "es"
-                              ? `Por favor, inicie sesión con ese número`
-                              : country === "fr"
-                              ? `Veuillez vous connecter avec ce numéro`
-                              : country === "id"
-                              ? `Silakan masuk dengan nomor tersebut`
-                              : country === "zh"
-                              ? `请使用该号码登录`
-                              : `Please log in with that number`,
+                                ? `該当の番号でログインしてください`
+                                : country === "es"
+                                  ? `Por favor, inicie sesión con ese número`
+                                  : country === "fr"
+                                    ? `Veuillez vous connecter avec ce numéro`
+                                    : country === "id"
+                                      ? `Silakan masuk dengan nomor tersebut`
+                                      : country === "zh"
+                                        ? `请使用该号码登录`
+                                        : `Please log in with that number`,
                           );
                         } else if (res.data.dupEmail) {
                           Alert.alert(
                             country === "ko"
                               ? `기존 계정이 있습니다.`
                               : country === "ja"
-                              ? `既存のアカウントがあります。`
-                              : country === "es"
-                              ? `Ya tiene una cuenta existente.`
-                              : country === "fr"
-                              ? `Vous avez déjà un compte existant.`
-                              : country === "id"
-                              ? `Anda sudah memiliki akun yang ada.`
-                              : country === "zh"
-                              ? `您已经有现有帐户。`
-                              : `You already have an existing account.`,
+                                ? `既存のアカウントがあります。`
+                                : country === "es"
+                                  ? `Ya tiene una cuenta existente.`
+                                  : country === "fr"
+                                    ? `Vous avez déjà un compte existant.`
+                                    : country === "id"
+                                      ? `Anda sudah memiliki akun yang ada.`
+                                      : country === "zh"
+                                        ? `您已经有现有帐户。`
+                                        : `You already have an existing account.`,
                             country === "ko"
                               ? `해당 이메일로 로그인해주세요`
                               : country === "ja"
-                              ? `そのメールアドレスでログインしてください`
-                              : country === "es"
-                              ? `Por favor, inicie sesión con ese correo electrónico`
-                              : country === "fr"
-                              ? `Veuillez vous connecter avec cette adresse e-mail`
-                              : country === "id"
-                              ? `Silakan masuk dengan email tersebut`
-                              : country === "zh"
-                              ? `请使用该电子邮件登录`
-                              : `Please log in with that email`,
+                                ? `そのメールアドレスでログインしてください`
+                                : country === "es"
+                                  ? `Por favor, inicie sesión con ese correo electrónico`
+                                  : country === "fr"
+                                    ? `Veuillez vous connecter avec cette adresse e-mail`
+                                    : country === "id"
+                                      ? `Silakan masuk dengan email tersebut`
+                                      : country === "zh"
+                                        ? `请使用该电子邮件登录`
+                                        : `Please log in with that email`,
                           );
                         } else {
                           Alert.alert(
                             country === "ko"
                               ? `오류 발생`
                               : country === "ja"
-                              ? `エラーが発生しました`
-                              : country === "es"
-                              ? `Error ocurrido`
-                              : country === "fr"
-                              ? `Erreur détectée`
-                              : country === "id"
-                              ? `Kesalahan terjadi`
-                              : country === "zh"
-                              ? `发生错误`
-                              : `Error occurred`,
+                                ? `エラーが発生しました`
+                                : country === "es"
+                                  ? `Error ocurrido`
+                                  : country === "fr"
+                                    ? `Erreur détectée`
+                                    : country === "id"
+                                      ? `Kesalahan terjadi`
+                                      : country === "zh"
+                                        ? `发生错误`
+                                        : `Error occurred`,
                             country === "ko"
                               ? `다시 시도해주세요`
                               : country === "ja"
-                              ? `もう一度試してください`
-                              : country === "es"
-                              ? `Inténtelo de nuevo`
-                              : country === "fr"
-                              ? `Réessayez`
-                              : country === "id"
-                              ? `Coba lagi`
-                              : country === "zh"
-                              ? `请再试一次`
-                              : `Please try again`,
+                                ? `もう一度試してください`
+                                : country === "es"
+                                  ? `Inténtelo de nuevo`
+                                  : country === "fr"
+                                    ? `Réessayez`
+                                    : country === "id"
+                                      ? `Coba lagi`
+                                      : country === "zh"
+                                        ? `请再试一次`
+                                        : `Please try again`,
                           );
                         }
                         //오류 발생
@@ -1365,16 +1373,16 @@ export default function Info({
                 {country === "ko"
                   ? `시작하기`
                   : country === "ja"
-                  ? `始める`
-                  : country === "es"
-                  ? `Comenzar`
-                  : country === "fr"
-                  ? `Commencer`
-                  : country === "id"
-                  ? `Mulai`
-                  : country === "zh"
-                  ? `开始`
-                  : `Start`}
+                    ? `始める`
+                    : country === "es"
+                      ? `Comenzar`
+                      : country === "fr"
+                        ? `Commencer`
+                        : country === "id"
+                          ? `Mulai`
+                          : country === "zh"
+                            ? `开始`
+                            : `Start`}
               </Text>
             </TouchableOpacity>
           </View>

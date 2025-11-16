@@ -26,7 +26,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>nmoment</string>
+			<string>videoit</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>nmoment</string>
@@ -44,6 +44,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb889860029800686</string>
+				<string>com.googleusercontent.apps.824749508213-815aivdlo4sbb6gpr5le9ctbg30usfid</string>
 			</array>
 		</dict>
 	</array>
@@ -127,9 +128,9 @@
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
