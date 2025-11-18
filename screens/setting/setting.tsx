@@ -1871,6 +1871,176 @@ export default function Setting({
                   height: 30,
                 }}></Image>
             </TouchableOpacity>
+            {/* 로그아웃 버튼 */}
+            <TouchableOpacity
+              style={{
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                justifyContent: "space-between",
+                paddingTop: vh(1),
+                paddingBottom: vh(1),
+              }}
+              onPress={async () => {
+                Alert.alert(
+                  country === "ko"
+                    ? "로그아웃"
+                    : country === "ja"
+                      ? "ログアウト"
+                      : country === "es"
+                        ? "Cerrar sesión"
+                        : country === "fr"
+                          ? "Se déconnecter"
+                          : country === "id"
+                            ? "Keluar"
+                            : country === "zh"
+                              ? "登出"
+                              : "Logout",
+                  country === "ko"
+                    ? "로그아웃 하시겠습니까?"
+                    : country === "ja"
+                      ? "ログアウトしますか？"
+                      : country === "es"
+                        ? "¿Quieres cerrar sesión?"
+                        : country === "fr"
+                          ? "Voulez-vous vous déconnecter ?"
+                          : country === "id"
+                            ? "Apakah Anda ingin keluar?"
+                            : country === "zh"
+                              ? "您要登出吗？"
+                              : "Do you want to logout?",
+                  [
+                    {
+                      text: country === "ko"
+                        ? "취소"
+                        : country === "ja"
+                          ? "キャンセル"
+                          : country === "es"
+                            ? "Cancelar"
+                            : country === "fr"
+                              ? "Annuler"
+                              : country === "id"
+                                ? "Batal"
+                                : country === "zh"
+                                  ? "取消"
+                                  : "Cancel",
+                      style: "cancel"
+                    },
+                    {
+                      text: country === "ko"
+                        ? "로그아웃"
+                        : country === "ja"
+                          ? "ログアウト"
+                          : country === "es"
+                            ? "Cerrar sesión"
+                            : country === "fr"
+                              ? "Se déconnecter"
+                              : country === "id"
+                                ? "Keluar"
+                                : country === "zh"
+                                  ? "登出"
+                                  : "Logout",
+                      onPress: async () => {
+                        try {
+                          // 1. Google 로그아웃
+                          try {
+                            const currentUser = await GoogleSignin.getCurrentUser();
+                            if (currentUser) {
+                              await GoogleSignin.signOut();
+                              console.log('Google 로그아웃 성공');
+                            }
+                          } catch (error) {
+                            console.error('Google 로그아웃 에러:', error);
+                          }
+
+                          // 2. Firebase 로그아웃 (Apple Sign In 포함)
+                          try {
+                            await auth()?.signOut();
+                            console.log('Firebase 로그아웃 성공');
+                          } catch (error) {
+                            console.error('Firebase 로그아웃 에러:', error);
+                          }
+
+                          // 3. 유저 상태 초기화
+                          updateUser({
+                            id: null,
+                            phone: null,
+                            link: null,
+                            linkChange: null,
+                            password: null,
+                            email: null,
+                            name: null,
+                            country: null,
+                            nick: null,
+                            profile: null,
+                            introduce: null,
+                            suggestion: null,
+                            callState: null,
+                            age: null,
+                            gender: null,
+                            lastVisit: null,
+                            attendanceCheck: null,
+                            roles: 0,
+                            banReason: null,
+                            refreshToken: null,
+                            pushToken: null,
+                            deletedAt: null,
+                            createdAt: null,
+                            updatedAt: null,
+                          });
+
+                          // 4. AsyncStorage 클리어
+                          await AsyncStorage.clear();
+
+                          // 5. EncryptedStorage 클리어
+                          await EncryptedStorage.clear();
+
+                          // 6. 로그인 화면으로 이동
+                          navigation.reset({
+                            index: 0,
+                            routes: [{ name: 'Login' }],
+                          });
+
+                        } catch (error) {
+                          console.error('로그아웃 전체 에러:', error);
+                          Alert.alert(
+                            country === "ko" ? "오류" : "Error",
+                            country === "ko"
+                              ? "로그아웃 중 오류가 발생했습니다."
+                              : "An error occurred during logout."
+                          );
+                        }
+                      }
+                    }
+                  ]
+                );
+              }}>
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: "black",
+                }}>
+                {country === "ko"
+                  ? "로그아웃"
+                  : country === "ja"
+                    ? "ログアウト"
+                    : country === "es"
+                      ? "Cerrar sesión"
+                      : country === "fr"
+                        ? "Se déconnecter"
+                        : country === "id"
+                          ? "Keluar"
+                          : country === "zh"
+                            ? "登出"
+                            : "Logout"}
+              </Text>
+              <Image
+                source={require("../../assets/setting/right.png")}
+                style={{
+                  width: 30,
+                  height: 30,
+                }}></Image>
+            </TouchableOpacity>
             <TouchableOpacity
               style={{
                 flexDirection: "row",

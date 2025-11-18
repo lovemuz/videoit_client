@@ -43,7 +43,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import axios from "axios";
 import EncryptedStorage from "react-native-encrypted-storage";
 import { useDispatch } from "react-redux";
-//import { CRYPTO_SECRET } from "@env";
+import { CRYPTO_SECRET } from "@env";
 import CryptoJS from "crypto-js";
 import Loading from "../reusable/loading";
 import { COUNTRY_LIST } from "../../lib/constant/country-constant";
@@ -101,7 +101,6 @@ export default function Info({
   appState?: any;
 }): JSX.Element {
 
-   const CRYPTO_SECRET = "vifsadfaedo21if13tw31312112faf";
   console.log("CRYPTO_SECRET exists:", !!CRYPTO_SECRET);
   
   const insets = useSafeAreaInsets();
@@ -875,12 +874,12 @@ export default function Info({
                               : `Male`,
                 ]}
                 onSelect={(selectedItem, index) => {
-                  if (Number(index) === 1) {
-                    setGender(2);
-                    setProfile("https://d5w3s87s233gw.cloudfront.net/boy.png");
-                  } else if (Number(index) === 0) {
-                    setProfile("https://d5w3s87s233gw.cloudfront.net/girl.png");
+                  if (Number(index) === 0) {
                     setGender(1);
+                    setProfile("https://d5w3s87s233gw.cloudfront.net/girl.png");
+                  } else if (Number(index) === 1) {
+                    setProfile("https://d5w3s87s233gw.cloudfront.net/boy.png");
+                    setGender(2);
                   }
                 }}
                 buttonTextAfterSelection={(selectedItem, index) => {
@@ -1178,6 +1177,7 @@ export default function Info({
                   return;
                 }
 
+                /*
                 if (country === "ko") {
                   //다날 본인인증 해야함 -> 폰만 추가해서 보내는걸로
                   //but 전화번호 검사시 만약 있는 계정이라면 그걸로 줘야함
@@ -1191,7 +1191,7 @@ export default function Info({
                     nick,
                     // code,
                   });
-                } else {
+                } else {*/
                   if (isLoadingRef.current) return;
                   isLoadingRef.current = true;
 
@@ -1363,7 +1363,7 @@ export default function Info({
                     });
                   isLoadingRef.current = false;
                   setLoading(false);
-                }
+                //lovemuz98}
               }}>
               <Text
                 style={{

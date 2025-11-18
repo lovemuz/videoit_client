@@ -1711,11 +1711,13 @@ export default function Call({
             width: "100%",
             height: "100%",
             position: "absolute",
-            zIndex: 2,
+            zIndex: 999,
+            elevation: 999,
             justifyContent: "space-between",
             paddingLeft: vw(2),
             paddingRight: vw(2),
-          }}>
+          }}
+          pointerEvents="box-none">
           <View
             style={{
               width: "100%",

@@ -555,8 +555,6 @@ function App({
           });
           connectSocket.current.on("tryConnectCall", (data: any) => {
             try {
-              
-              Alert.alert('111');
               const RoomId = data.RoomId;
               const you = data.you;
               const avgTime: number = data.avgTime;
@@ -770,26 +768,27 @@ function App({
     }
   }, [user, reconnectSocket]);
 
-  useEffect(() => {
-    PushNotificationIOS.addEventListener("notification", onRemoteNotification);
-  });
-
   const onRemoteNotification = async (notification: any) => {};
 
-  PushNotification.createChannel(
-    {
-      channelId: "videoit",
-      channelName: "videoit",
-      //channelDescription: 'lovelyme',
-      playSound: true, // (optional) default: true
-      soundName: "default", // (optional) See `soundName` parameter of `localNotification` function
-      importance: Importance.HIGH, // (optional) default: Importance.HIGH. Int value of the Android notification importance
-      vibrate: true, // (optional) default: true. Creates the default vibration pattern if true.
-    },
-    created => console.log(`createChannel returned '${created}'`), // (optional) callback returns whether the channel was created, false means it already existed.
-  );
+  useEffect(() => {
+    PushNotificationIOS.addEventListener("notification", onRemoteNotification);
+  }, []);
 
-  PushNotification.configure({
+  useEffect(() => {
+    PushNotification.createChannel(
+      {
+        channelId: "videoit",
+        channelName: "videoit",
+        //channelDescription: 'lovelyme',
+        playSound: true, // (optional) default: true
+        soundName: "default", // (optional) See `soundName` parameter of `localNotification` function
+        importance: Importance.HIGH, // (optional) default: Importance.HIGH. Int value of the Android notification importance
+        vibrate: true, // (optional) default: true. Creates the default vibration pattern if true.
+      },
+      created => console.log(`createChannel returned '${created}'`), // (optional) callback returns whether the channel was created, false means it already existed.
+    );
+
+    PushNotification.configure({
     // (optional) Called when Token is generated (iOS and Android)
     onRegister: async function (token: any) {
       const tokenFromFir = await messaging().getToken();
@@ -924,12 +923,13 @@ function App({
     ignoreInForeground: false,
   });
 
-  PushNotification.popInitialNotification(notification => {
-    console.log("Initial Notification", notification);
-  });
-  PushNotification.getChannels(function (channel_ids) {
-    console.log("channel TTI", channel_ids); // ['channel_id_1']
-  });
+    PushNotification.popInitialNotification(notification => {
+      console.log("Initial Notification", notification);
+    });
+    PushNotification.getChannels(function (channel_ids) {
+      console.log("channel TTI", channel_ids); // ['channel_id_1']
+    });
+  }, []); // useEffect 종료
 
   const language = String(
     Platform.OS === "ios"

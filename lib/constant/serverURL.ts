@@ -6,6 +6,6 @@ import { DEV_MODE } from "@env";
 // const serverURL = 'https://api-dev.nmoment.live'
 // const serverURL = 'https://api.nmoment.live'
 //const serverURL = 'https://api.videoit.net'
-const serverURL = 'http://172.30.1.67:5050'
+const serverURL = 'http://172.30.1.77:5050'
 
 export default serverURL

@@ -41,7 +41,7 @@ import serverURL from "../../lib/constant/serverURL";
 import { appleAuth } from "@invertase/react-native-apple-authentication";
 import jwtDecode from "jwt-decode";
 import EncryptedStorage from "react-native-encrypted-storage";
-//import { CRYPTO_SECRET } from "@env";
+import { CRYPTO_SECRET } from "@env";
 import CryptoJS from "crypto-js";
 
 import {
@@ -99,7 +99,6 @@ export default function Login({
   const insets = useSafeAreaInsets();
   const isLoadingRef = useRef(false);
 
-  const CRYPTO_SECRET = "vifsadfaedo21if13tw31312112faf";
   console.log("CRYPTO_SECRET exists:", !!CRYPTO_SECRET);
 
   useEffect(() => {

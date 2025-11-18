@@ -1,4 +1,25 @@
+# --- Fix broken Boost URL for React Native ---
+boost_spec_path = File.join(__dir__, '../node_modules/react-native/third-party-podspecs/boost.podspec')
+
+if File.exist?(boost_spec_path)
+  content = File.read(boost_spec_path)
+  
+  # Replace broken GitHub URL with permanent Boost archive mirror
+  content.gsub!(
+    %r{https://github.com/boostorg/boost/releases/download/boost-1\.76\.0/boost-1\.76\.0\.tar\.gz},
+    'https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.gz'
+  )
+
+  File.write(boost_spec_path, content)
+  Pod::UI.puts "🔧 Boost URL patched successfully."
+else
+  Pod::UI.puts "⚠️ Boost podspec not found. Skipping patch."
+end
+# --- End Fix ---
+
+
 require 'pathname'
+
 require Pod::Executable.execute_command('node', ['-p',
   'require.resolve(
     "react-native/scripts/react_native_pods.rb",
@@ -79,20 +100,6 @@ target 'nmoment' do
           config.build_settings['EXCLUDED_SOURCE_FILE_NAMES'] = 'Flipper*'
         end
       end
-    end
-
-    # ✅ boost 다운로드 URL 로컬 캐시로 치환
-    boost_spec_path = File.join(__dir__, '../node_modules/react-native/third-party-podspecs/boost.podspec')
-    if File.exist?(boost_spec_path)
-      text = File.read(boost_spec_path)
-      text.gsub!(
-        %r{https://sourceforge\.net/projects/boost/files/boost/1\.76\.0/boost_1_76_0\.tar\.gz(?:/download)?},
-        'file:///Users/muz/Library/Caches/CocoaPods/Pods/Release/boost/1.76.0/boost_1_76_0.tar.gz'
-      )
-      File.write(boost_spec_path, text)
-      Pod::UI.puts "✅ Patched boost.podspec to use local cache"
-    else
-      Pod::UI.warn "⚠️ boost.podspec not found at #{boost_spec_path}"
     end
 
     # ✅ Hermes bitcode 제거 + 코드 서명 재적용 (App Store 오류 방지)

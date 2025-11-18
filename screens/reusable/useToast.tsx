@@ -25,6 +25,7 @@ import {
   Linking,
   ActivityIndicator,
   ImageBackground,
+  AppState,
 } from "react-native";
 import {NotchProvider, NotchView} from "react-native-notchclear";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -532,10 +533,11 @@ const ToastComponent = ({
                     </View>
                   </View>
                 </View>
-                {(!user?.backgroundApnsOn ||
+                {(AppState.currentState === "active" ||
+                  !user?.backgroundApnsOn ||
                   user?.country === COUNTRY_LIST.중국 ||
                   Platform.OS !==
-                    "ios") /* iOS에서는 CallKit 팝업을 통해서 전화 받아야 합니다. iOS에서는 팝업을 아래로 내리는 것을 고려해 주세요.*/ && (
+                    "ios") /* foreground일 때는 항상 버튼 표시. background일 때는 iOS에서 CallKit 팝업을 통해서 전화 받아야 합니다. */ && (
                   <View
                     style={{
                       flexDirection: "row",
