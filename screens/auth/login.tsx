@@ -310,7 +310,7 @@ export default function Login({
               const point = res.data?.point;
               updateUser(user);
               updatePoint(point);
-              navigation.navigate("Home");
+              navigation.navigate("Live");
             } else if (res.data.status === "ban") {
               Alert.alert(
                 country === "ko"

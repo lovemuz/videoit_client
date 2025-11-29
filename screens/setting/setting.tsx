@@ -131,6 +131,8 @@ export default function Setting({
   const [countryModalOn, setCountryModalOn] = useState(false);
   // 회원탈퇴
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  // 로그아웃
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const rewardedRef = useRef<RewardedInterstitialAd | null>(null);
 
@@ -820,6 +822,199 @@ export default function Setting({
               {/* 취소 버튼 */}
               <TouchableOpacity
                 onPress={() => setShowDeleteModal(false)}
+                style={{
+                  paddingVertical: 15,
+                  width: '100%',
+                }}
+              >
+                <Text style={{
+                  color: '#666',
+                  fontSize: 16,
+                  textAlign: 'center',
+                }}>
+                  {country === "ko"
+                    ? "취소"
+                    : country === "ja"
+                      ? "キャンセル"
+                      : country === "es"
+                        ? "Cancelar"
+                        : country === "fr"
+                          ? "Annuler"
+                          : country === "id"
+                            ? "Batal"
+                            : country === "zh"
+                              ? "取消"
+                              : "Cancel"}
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </Modal>
+
+        {/* 로그아웃 확인 모달 */}
+        <Modal
+          transparent={true}
+          visible={showLogoutModal}
+          animationType="fade"
+          onRequestClose={() => setShowLogoutModal(false)}
+        >
+          <View style={{
+            flex: 1,
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingHorizontal: 20,
+          }}>
+            <View style={{
+              backgroundColor: 'white',
+              borderRadius: 20,
+              padding: 30,
+              width: '100%',
+              maxWidth: 350,
+              alignItems: 'center',
+            }}>
+              {/* 아이콘 */}
+              <View style={{
+                width: 60,
+                height: 60,
+                backgroundColor: PALETTE.COLOR_SKY,
+                borderRadius: 30,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginBottom: 20,
+              }}>
+                <Text style={{ color: 'white', fontSize: 30, fontWeight: 'bold' }}>?</Text>
+              </View>
+
+              {/* 제목 */}
+              <Text style={{
+                fontSize: 18,
+                fontWeight: 'bold',
+                color: 'black',
+                marginBottom: 20,
+                textAlign: 'center',
+              }}>
+                {country === "ko"
+                  ? "로그아웃 하시겠습니까?"
+                  : country === "ja"
+                    ? "ログアウトしますか？"
+                    : country === "es"
+                      ? "¿Quieres cerrar sesión?"
+                      : country === "fr"
+                        ? "Voulez-vous vous déconnecter ?"
+                        : country === "id"
+                          ? "Apakah Anda ingin keluar?"
+                          : country === "zh"
+                            ? "您要登出吗？"
+                            : "Do you want to logout?"}
+              </Text>
+
+              {/* 로그아웃 버튼 */}
+              <TouchableOpacity
+                onPress={async () => {
+                  try {
+                    // 1. Google 로그아웃
+                    try {
+                      const currentUser = await GoogleSignin.getCurrentUser();
+                      if (currentUser) {
+                        await GoogleSignin.signOut();
+                        console.log('Google 로그아웃 성공');
+                      }
+                    } catch (error) {
+                      console.error('Google 로그아웃 에러:', error);
+                    }
+
+                    // 2. Firebase 로그아웃 (Apple Sign In 포함)
+                    try {
+                      await auth()?.signOut();
+                      console.log('Firebase 로그아웃 성공');
+                    } catch (error) {
+                      console.error('Firebase 로그아웃 에러:', error);
+                    }
+
+                    // 3. 유저 상태 초기화
+                    updateUser({
+                      id: null,
+                      phone: null,
+                      link: null,
+                      linkChange: null,
+                      password: null,
+                      email: null,
+                      name: null,
+                      country: null,
+                      nick: null,
+                      profile: null,
+                      introduce: null,
+                      suggestion: null,
+                      callState: null,
+                      age: null,
+                      gender: null,
+                      lastVisit: null,
+                      attendanceCheck: null,
+                      roles: 0,
+                      banReason: null,
+                      refreshToken: null,
+                      pushToken: null,
+                      deletedAt: null,
+                      createdAt: null,
+                      updatedAt: null,
+                    });
+
+                    // 4. AsyncStorage 클리어
+                    await AsyncStorage.clear();
+
+                    // 5. EncryptedStorage 클리어
+                    await EncryptedStorage.clear();
+
+                    // 6. 로그인 화면으로 이동
+                    navigation.reset({
+                      index: 0,
+                      routes: [{ name: 'Login' }],
+                    });
+
+                  } catch (error) {
+                    console.error('로그아웃 전체 에러:', error);
+                    Alert.alert(
+                      country === "ko" ? "오류" : "Error",
+                      country === "ko"
+                        ? "로그아웃 중 오류가 발생했습니다."
+                        : "An error occurred during logout."
+                    );
+                  }
+                }}
+                style={{
+                  backgroundColor: PALETTE.COLOR_SKY,
+                  paddingVertical: 15,
+                  borderRadius: 10,
+                  marginBottom: 10,
+                  width: '100%',
+                }}
+              >
+                <Text style={{
+                  color: 'white',
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                }}>
+                  {country === "ko"
+                    ? "로그아웃"
+                    : country === "ja"
+                      ? "ログアウト"
+                      : country === "es"
+                        ? "Cerrar sesión"
+                        : country === "fr"
+                          ? "Se déconnecter"
+                          : country === "id"
+                            ? "Keluar"
+                            : country === "zh"
+                              ? "登出"
+                              : "Logout"}
+                </Text>
+              </TouchableOpacity>
+
+              {/* 취소 버튼 */}
+              <TouchableOpacity
+                onPress={() => setShowLogoutModal(false)}
                 style={{
                   paddingVertical: 15,
                   width: '100%',
@@ -1881,139 +2076,8 @@ export default function Setting({
                 paddingTop: vh(1),
                 paddingBottom: vh(1),
               }}
-              onPress={async () => {
-                Alert.alert(
-                  country === "ko"
-                    ? "로그아웃"
-                    : country === "ja"
-                      ? "ログアウト"
-                      : country === "es"
-                        ? "Cerrar sesión"
-                        : country === "fr"
-                          ? "Se déconnecter"
-                          : country === "id"
-                            ? "Keluar"
-                            : country === "zh"
-                              ? "登出"
-                              : "Logout",
-                  country === "ko"
-                    ? "로그아웃 하시겠습니까?"
-                    : country === "ja"
-                      ? "ログアウトしますか？"
-                      : country === "es"
-                        ? "¿Quieres cerrar sesión?"
-                        : country === "fr"
-                          ? "Voulez-vous vous déconnecter ?"
-                          : country === "id"
-                            ? "Apakah Anda ingin keluar?"
-                            : country === "zh"
-                              ? "您要登出吗？"
-                              : "Do you want to logout?",
-                  [
-                    {
-                      text: country === "ko"
-                        ? "취소"
-                        : country === "ja"
-                          ? "キャンセル"
-                          : country === "es"
-                            ? "Cancelar"
-                            : country === "fr"
-                              ? "Annuler"
-                              : country === "id"
-                                ? "Batal"
-                                : country === "zh"
-                                  ? "取消"
-                                  : "Cancel",
-                      style: "cancel"
-                    },
-                    {
-                      text: country === "ko"
-                        ? "로그아웃"
-                        : country === "ja"
-                          ? "ログアウト"
-                          : country === "es"
-                            ? "Cerrar sesión"
-                            : country === "fr"
-                              ? "Se déconnecter"
-                              : country === "id"
-                                ? "Keluar"
-                                : country === "zh"
-                                  ? "登出"
-                                  : "Logout",
-                      onPress: async () => {
-                        try {
-                          // 1. Google 로그아웃
-                          try {
-                            const currentUser = await GoogleSignin.getCurrentUser();
-                            if (currentUser) {
-                              await GoogleSignin.signOut();
-                              console.log('Google 로그아웃 성공');
-                            }
-                          } catch (error) {
-                            console.error('Google 로그아웃 에러:', error);
-                          }
-
-                          // 2. Firebase 로그아웃 (Apple Sign In 포함)
-                          try {
-                            await auth()?.signOut();
-                            console.log('Firebase 로그아웃 성공');
-                          } catch (error) {
-                            console.error('Firebase 로그아웃 에러:', error);
-                          }
-
-                          // 3. 유저 상태 초기화
-                          updateUser({
-                            id: null,
-                            phone: null,
-                            link: null,
-                            linkChange: null,
-                            password: null,
-                            email: null,
-                            name: null,
-                            country: null,
-                            nick: null,
-                            profile: null,
-                            introduce: null,
-                            suggestion: null,
-                            callState: null,
-                            age: null,
-                            gender: null,
-                            lastVisit: null,
-                            attendanceCheck: null,
-                            roles: 0,
-                            banReason: null,
-                            refreshToken: null,
-                            pushToken: null,
-                            deletedAt: null,
-                            createdAt: null,
-                            updatedAt: null,
-                          });
-
-                          // 4. AsyncStorage 클리어
-                          await AsyncStorage.clear();
-
-                          // 5. EncryptedStorage 클리어
-                          await EncryptedStorage.clear();
-
-                          // 6. 로그인 화면으로 이동
-                          navigation.reset({
-                            index: 0,
-                            routes: [{ name: 'Login' }],
-                          });
-
-                        } catch (error) {
-                          console.error('로그아웃 전체 에러:', error);
-                          Alert.alert(
-                            country === "ko" ? "오류" : "Error",
-                            country === "ko"
-                              ? "로그아웃 중 오류가 발생했습니다."
-                              : "An error occurred during logout."
-                          );
-                        }
-                      }
-                    }
-                  ]
-                );
+              onPress={() => {
+                setShowLogoutModal(true);
               }}>
               <Text
                 style={{
@@ -2072,6 +2136,12 @@ export default function Setting({
                             ? "删除账户"
                             : "Delete Account"}
               </Text>
+              <Image
+                source={require("../../assets/setting/right.png")}
+                style={{
+                  width: 30,
+                  height: 30,
+                }}></Image>
             </TouchableOpacity>
             {/*
             <TouchableOpacity
